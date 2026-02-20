@@ -4,7 +4,7 @@
 @theme {
   --color-ink: #0f172a;
   --color-ivory: #fafaf7;
-  --color-rose: #dc446e;
+  --color-rose: #f28060;
   --color-wine: #7a1f2b;
   --color-sage: #487d60;
   --color-gold: #c6a85d;
@@ -30,11 +30,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a:not([class]) {
   color: var(--color-wine);
 }
 
-a:hover {
+a:not([class]):hover {
   color: var(--color-rose);
 }
 
