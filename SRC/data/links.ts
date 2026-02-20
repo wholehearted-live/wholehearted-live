@@ -1,9 +1,13 @@
 export const LINKS = {
-  // Replace these with your real Unicity “shop through us” URLs
   unicity: {
-    subscription: "https://example.com/your-unicity-subscription-link",
-    enroll: "https://example.com/your-unicity-enroll-link",
-    flagshipProduct: "https://example.com/your-unicity-product-link",
+    // Try the Feel Great System — customer referral link
+    tryIt: "https://ufeelgreat.com/c/wholehearted",
+    // Join the team & start a Unicity business
+    partner: "https://enrollment.unicity.com/c/wholehearted",
+    // Legacy aliases kept for any existing references
+    subscription: "https://ufeelgreat.com/c/wholehearted",
+    enroll: "https://enrollment.unicity.com/c/wholehearted",
+    flagshipProduct: "https://ufeelgreat.com/c/wholehearted",
   },
 
   social: {

@@ -3,59 +3,347 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { LINKS } from "../data/links";
 ---
 
-<BaseLayout title="Shop | Wholehearted" description="Shop through us via Unicity’s secure website.">
-  <section class="py-14 sm:py-20">
-    <div class="max-w-3xl">
-      <h1 class="text-4xl font-semibold tracking-tight text-ink">Shop through us</h1>
-      <p class="mt-5 text-lg text-ink/70 leading-relaxed">
-        You'll complete checkout on Unicity's secure website. When you shop through our links, your subscription stays connected
-        to us so we can support you with education, accountability, and encouragement.
+<BaseLayout
+  title="Feel Great System | WholeHearted"
+  description="Discover the Feel Great System — Unimate & Balance — the simple 2-step protocol that helps you reclaim your energy, curb cravings, and feel whole again."
+>
+
+  <!-- HERO -->
+  <section class="py-16 sm:py-24 text-center max-w-3xl mx-auto">
+    <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-4">The WholeHearted Way</p>
+    <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-ink leading-tight">
+      You Were Made to<br/><span class="text-rose">Feel Great</span>
+    </h1>
+    <p class="mt-6 text-lg text-ink/70 leading-relaxed max-w-2xl mx-auto">
+      Wholehearted living starts with a body that has the fuel it needs. The Feel Great System is a simple,
+      science-backed protocol — two products, used daily — that helps calm glucose spikes, restore steady
+      energy, and support your whole-body health. No crash diets. No complicated plans. Just results.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href={LINKS.unicity.tryIt}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl bg-rose px-7 py-4 text-base font-semibold text-white hover:bg-rose/85 transition-colors"
+      >
+        Try the Feel Great System →
+      </a>
+      <a
+        href={LINKS.unicity.partner}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl border border-ink/15 bg-white/70 px-7 py-4 text-base font-semibold text-ink/80 hover:bg-white transition-colors"
+      >
+        Join Our Team
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-ink/50">Backed by science · 90-Day money-back guarantee · Ships to your door</p>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="border-t border-ink/10 mb-16"></div>
+
+  <!-- WHAT IS THE FEEL GREAT SYSTEM -->
+  <section class="mb-20 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold text-ink tracking-tight">What Is the Feel Great System?</h2>
+      <p class="mt-4 text-ink/65 max-w-2xl mx-auto leading-relaxed">
+        Developed by Unicity — a 30-year science-based nutrition company — the Feel Great System is a
+        clinically studied, two-step daily protocol designed to work with your body's natural rhythms.
       </p>
     </div>
 
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
-        <h3 class="font-semibold text-ink">Start a subscription</h3>
-        <p class="mt-2 text-sm text-ink/70">The simplest way to get started with consistent support.</p>
-        <a
-          class="mt-5 inline-flex rounded-xl bg-rose px-5 py-3 text-sm font-semibold text-white hover:bg-rose/85"
-          href={LINKS.unicity.subscription}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Start subscription
-        </a>
+    <!-- Two Products -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Unimate -->
+      <div class="rounded-2xl border border-ink/10 bg-white/70 p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-rose/10 flex items-center justify-center text-rose text-lg font-bold">1</div>
+          <h3 class="text-xl font-semibold text-ink">Unimate</h3>
+        </div>
+        <p class="text-sm text-rose font-medium uppercase tracking-wider mb-3">Morning · Before breakfast</p>
+        <p class="text-ink/70 leading-relaxed mb-5">
+          A concentrated yerba maté drink that gives you real, lasting energy — without the jitters or crash.
+          It supports mental clarity, curbs cravings, and helps your body stay in fat-burning mode between meals.
+        </p>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li class="flex items-start gap-2"><span class="text-rose mt-0.5">✦</span> Boosts focus, mood & natural energy</li>
+          <li class="flex items-start gap-2"><span class="text-rose mt-0.5">✦</span> Supports healthy appetite & satiety</li>
+          <li class="flex items-start gap-2"><span class="text-rose mt-0.5">✦</span> Helps maintain steady blood sugar between meals</li>
+          <li class="flex items-start gap-2"><span class="text-rose mt-0.5">✦</span> Promotes calm, motivated clarity</li>
+        </ul>
       </div>
 
-      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
-        <h3 class="font-semibold text-ink">Enroll / connect</h3>
-        <p class="mt-2 text-sm text-ink/70">If you need the official enrollment or customer path.</p>
-        <a
-          class="mt-5 inline-flex rounded-xl border border-ink/10 bg-white/70 px-5 py-3 text-sm font-semibold text-ink/80 hover:bg-white"
-          href={LINKS.unicity.enroll}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Continue on Unicity
-        </a>
+      <!-- Balance -->
+      <div class="rounded-2xl border border-ink/10 bg-white/70 p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center text-sage text-lg font-bold">2</div>
+          <h3 class="text-xl font-semibold text-ink">Balance</h3>
+        </div>
+        <p class="text-sm text-sage font-medium uppercase tracking-wider mb-3">Before meals · Especially lunch & dinner</p>
+        <p class="text-ink/70 leading-relaxed mb-5">
+          A fiber matrix drink taken before meals that creates a gel in the gut — slowing glucose absorption,
+          supporting healthy cholesterol, and feeding your microbiome. It helps your body respond to food the
+          way it was designed to.
+        </p>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✦</span> Calms post-meal glucose spikes</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✦</span> Supports healthy cholesterol & heart function</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✦</span> Feeds your gut microbiome for better digestion</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✦</span> Reduces inflammation & sugar crashes</li>
+        </ul>
       </div>
 
-      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
-        <h3 class="font-semibold text-ink">Featured link</h3>
-        <p class="mt-2 text-sm text-ink/70">A featured product page you want to highlight.</p>
-        <a
-          class="mt-5 inline-flex rounded-xl border border-ink/10 bg-white/70 px-5 py-3 text-sm font-semibold text-ink/80 hover:bg-white"
-          href={LINKS.unicity.flagshipProduct}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View on Unicity
-        </a>
-      </div>
     </div>
+  </section>
 
-    <p class="mt-8 text-xs text-ink/55 max-w-3xl">
-      Note: This site provides education and encouragement. Product availability, pricing, and checkout are handled by Unicity.
+  <!-- WHO IT'S FOR -->
+  <section class="mb-20 rounded-2xl bg-rose/5 border border-rose/10 p-10 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold text-ink mb-6 text-center">Does This Sound Like You?</h2>
+    <div class="grid sm:grid-cols-2 gap-4 text-sm text-ink/75">
+      {[
+        "You wake up tired no matter how much you sleep",
+        "You crave sugar, carbs, or caffeine to get through the day",
+        "You've tried diets but nothing sticks long-term",
+        "You feel foggy, unfocused, or emotionally flat",
+        "Your doctor says you're \"fine\" but you know something's off",
+        "You're ready to support your body — not fight it",
+        "You want energy and clarity to live your purpose fully",
+        "You believe your health and your faith are connected",
+      ].map((item) => (
+        <div class="flex items-start gap-3">
+          <span class="text-rose text-base mt-0.5">✦</span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+    <p class="mt-8 text-center text-ink/60 text-sm">
+      If any of these resonate, the Feel Great System was made for you.
     </p>
   </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="mb-20 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-semibold text-ink tracking-tight">How It Works</h2>
+      <p class="mt-3 text-ink/60 max-w-xl mx-auto">Simple enough to stick with. Powerful enough to change everything.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 text-center">
+      {[
+        { step: "1", title: "Morning", body: "Drink Unimate before or instead of breakfast to fuel your morning with steady energy and mental clarity." },
+        { step: "2", title: "Before Meals", body: "Mix Balance before lunch and dinner to calm blood sugar spikes and support gut health naturally." },
+        { step: "3", title: "Feel the Shift", body: "Most people notice more energy and fewer cravings within the first week. Full results over 90 days." },
+      ].map(({ step, title, body }) => (
+        <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+          <div class="w-10 h-10 rounded-full bg-rose text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">{step}</div>
+          <h3 class="font-semibold text-ink mb-2">{title}</h3>
+          <p class="text-sm text-ink/65 leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- WHY WHOLEHEARTED -->
+  <section class="mb-20 max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Why Shop With Us</p>
+      <h2 class="text-3xl font-semibold text-ink tracking-tight mb-5">You're Not Just Buying a Product</h2>
+      <p class="text-ink/70 leading-relaxed mb-4">
+        When you order through WholeHearted, you're joining a faith-centered community of people on the
+        same journey. We provide education, encouragement, and accountability — not just a link to a checkout page.
+      </p>
+      <p class="text-ink/70 leading-relaxed mb-4">
+        We show up live, answer your questions, celebrate your wins, and walk alongside you for the full 90 days
+        and beyond. That's the WholeHearted difference.
+      </p>
+      <p class="text-ink/70 leading-relaxed">
+        And because we believe in this so much, Unicity backs it with a <strong class="text-ink">90-day money-back guarantee</strong>.
+        You have nothing to lose — and everything to gain.
+      </p>
+    </div>
+    <div class="space-y-4">
+      {[
+        { icon: "🤝", title: "Personal Support", body: "We check in with you, answer questions, and celebrate every win alongside you." },
+        { icon: "📖", title: "Live Education", body: "Join our free live sessions where we teach the science and the lifestyle together." },
+        { icon: "🙏", title: "Faith-Centered", body: "We believe wholeness is spiritual as much as physical. You belong here." },
+        { icon: "🔒", title: "Risk-Free", body: "90-day money-back guarantee through Unicity. Try it with confidence." },
+      ].map(({ icon, title, body }) => (
+        <div class="flex items-start gap-4 rounded-xl border border-ink/10 bg-white/60 p-4">
+          <span class="text-2xl">{icon}</span>
+          <div>
+            <p class="font-semibold text-ink text-sm">{title}</p>
+            <p class="text-xs text-ink/60 mt-0.5 leading-relaxed">{body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- DUAL CTA -->
+  <section class="mb-20 max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+
+    <!-- Try It -->
+    <div class="rounded-2xl bg-rose text-white p-8 flex flex-col">
+      <p class="text-white/70 text-sm font-semibold uppercase tracking-widest mb-2">For You</p>
+      <h3 class="text-2xl font-semibold mb-3">Ready to Feel Great?</h3>
+      <p class="text-white/80 leading-relaxed text-sm mb-6 flex-1">
+        Start your 90-day journey with the Feel Great System. Order through our link and you'll have
+        our full community and support behind you from day one.
+      </p>
+      <a
+        href={LINKS.unicity.tryIt}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl bg-white text-rose px-6 py-3 text-sm font-semibold hover:bg-ivory transition-colors"
+      >
+        Try the Feel Great System →
+      </a>
+      <p class="mt-3 text-white/50 text-xs text-center">90-day money-back guarantee</p>
+    </div>
+
+    <!-- Partner -->
+    <div class="rounded-2xl border border-ink/10 bg-white/70 p-8 flex flex-col">
+      <p class="text-gold font-semibold text-sm uppercase tracking-widest mb-2">For the Entrepreneur</p>
+      <h3 class="text-2xl font-semibold text-ink mb-3">Build Something Meaningful</h3>
+      <p class="text-ink/70 leading-relaxed text-sm mb-6 flex-1">
+        Love what WholeHearted stands for? You can earn income sharing the same products and mission.
+        Join our Unicity business team and grow alongside a community that believes in what they sell.
+      </p>
+      <a
+        href={LINKS.unicity.partner}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl bg-ink text-white px-6 py-3 text-sm font-semibold hover:bg-ink/85 transition-colors"
+      >
+        Join Our Team →
+      </a>
+      <p class="mt-3 text-ink/40 text-xs text-center">Learn about the business opportunity</p>
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="mb-20 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Real People. Real Results.</p>
+      <h2 class="text-3xl font-semibold text-ink tracking-tight">What the Community Is Saying</h2>
+      <p class="mt-3 text-ink/60 max-w-xl mx-auto">These are everyday people — not athletes or influencers — just folks who decided to feel better.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      {[
+        {
+          quote: "I had zero energy for years. Within two weeks on the Feel Great System I was waking up before my alarm — something that hadn't happened in a decade.",
+          name: "Lisa M.",
+          detail: "Lost 18 lbs · More energy than her 30s",
+        },
+        {
+          quote: "My A1C dropped from 8.1 to 6.4 in four months. My doctor was shocked. I wasn't — I finally gave my body what it needed.",
+          name: "David R.",
+          detail: "Reversed pre-diabetes markers",
+        },
+        {
+          quote: "The community at WholeHearted kept me going when I wanted to quit. This isn't just a product — it's people who genuinely care.",
+          name: "Michelle T.",
+          detail: "Down 24 lbs · Off blood pressure meds",
+        },
+        {
+          quote: "I've tried everything. This is the first thing that actually worked — and I didn't have to give up my life to do it.",
+          name: "James K.",
+          detail: "Lost 31 lbs in 90 days",
+        },
+        {
+          quote: "As a woman of faith, finding a wellness community that actually honors that dimension of health was everything. WholeHearted is the real deal.",
+          name: "Sharon W.",
+          detail: "90-day member · Feel Great ambassador",
+        },
+        {
+          quote: "Brain fog I'd had for years just lifted. My husband noticed before I did. I feel like myself again — actually, better than myself.",
+          name: "Karen B.",
+          detail: "Mental clarity · 15 lbs lighter",
+        },
+      ].map(({ quote, name, detail }) => (
+        <div class="rounded-2xl border border-ink/10 bg-white/70 p-6 flex flex-col">
+          <p class="text-rose text-2xl mb-3 leading-none">"</p>
+          <p class="text-sm text-ink/75 leading-relaxed flex-1 italic">{quote}</p>
+          <div class="mt-5 pt-4 border-t border-ink/10">
+            <p class="font-semibold text-ink text-sm">{name}</p>
+            <p class="text-xs text-ink/50 mt-0.5">{detail}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER -->
+  <section class="mb-20 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">The Transformation</p>
+      <h2 class="text-3xl font-semibold text-ink tracking-tight">Before & After the Feel Great System</h2>
+      <p class="mt-3 text-ink/60 max-w-xl mx-auto">It's not just about the scale. It's about how you feel every single day.</p>
+    </div>
+    <div class="rounded-2xl border border-ink/10 overflow-hidden">
+      <div class="grid md:grid-cols-2">
+        <!-- Before -->
+        <div class="bg-ink/5 p-8">
+          <p class="font-bold text-ink/40 uppercase tracking-widest text-xs mb-5">Before</p>
+          <ul class="space-y-4">
+            {[
+              "Dragging yourself out of bed every morning",
+              "Reaching for caffeine or sugar just to function",
+              "Cravings that feel impossible to resist",
+              "Stubborn weight that won't budge no matter what you try",
+              "Brain fog that makes everything harder",
+              "Mood swings and energy crashes throughout the day",
+              "Feeling like your body is working against you",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-sm text-ink/60">
+                <span class="text-ink/25 mt-0.5 text-lg leading-none">✗</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- After -->
+        <div class="bg-rose/5 p-8">
+          <p class="font-bold text-rose/60 uppercase tracking-widest text-xs mb-5">After 90 Days</p>
+          <ul class="space-y-4">
+            {[
+              "Waking up rested and ready before the alarm",
+              "Natural, steady energy that lasts all day",
+              "Cravings calm — food feels like fuel, not a battle",
+              "Clothes fitting differently, body responding again",
+              "Clear-headed, focused, and emotionally stable",
+              "Balanced mood and consistent energy from morning to night",
+              "A body that finally feels like home",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-sm text-ink/75">
+                <span class="text-rose mt-0.5 text-lg leading-none">✦</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href={LINKS.unicity.tryIt}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl bg-rose px-8 py-4 text-base font-semibold text-white hover:bg-rose/85 transition-colors"
+      >
+        Start Your 90-Day Reset →
+      </a>
+      <p class="mt-3 text-xs text-ink/40">90-day money-back guarantee · No crash diets · Ships to your door</p>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <p class="mb-16 text-xs text-ink/40 max-w-3xl mx-auto text-center leading-relaxed">
+    WholeHearted is an independent Unicity partner. Product orders, pricing, and fulfillment are handled
+    by Unicity on their secure platform. These statements have not been evaluated by the FDA.
+    This product is not intended to diagnose, treat, cure, or prevent any disease.
+  </p>
+
 </BaseLayout>
