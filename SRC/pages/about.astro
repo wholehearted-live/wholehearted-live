@@ -14,7 +14,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </h1>
       <span class="mx-auto mt-4 block h-1.5 w-24 rounded-full bg-wine"></span>
       <p class="mt-6 max-w-xl text-base text-ink/70 mx-auto">
-        A nurse, a veteran, a nutritionist, and a pastoral counselor — and most importantly, a husband and wife
+        A nutritionist, a pastoral counselor, a nurse, and a veteran — and most importantly, a wife and husband
         who believe you were made to feel whole.
       </p>
     </div>
@@ -45,58 +45,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Meet Chris -->
+  <!-- Meet Molly -->
   <section class="py-8 max-w-4xl mx-auto">
     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
 
       <!-- Photo placeholder -->
       <div class="rounded-2xl overflow-hidden bg-ink/5 border border-ink/10 aspect-[4/5] flex flex-col items-center justify-center text-center p-8">
         <!-- Replace this div with an <img> tag when you have a photo:
-             <img src="/team/chris.jpg" alt="Chris Broad" class="w-full h-full object-cover object-top" />
+             <img src="/team/molly.jpg" alt="Molly Broad" class="w-full h-full object-cover object-top" />
         -->
-        <div class="w-20 h-20 rounded-full bg-rose/20 flex items-center justify-center text-rose text-3xl mb-4">C</div>
+        <div class="w-20 h-20 rounded-full bg-sage/20 flex items-center justify-center text-sage text-3xl mb-4">M</div>
         <p class="text-ink/40 text-sm">Photo coming soon</p>
       </div>
 
       <!-- Bio -->
       <div class="py-4">
-        <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
-        <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Chris Broad</h2>
-        <p class="text-ink/50 text-sm mb-6">Emergency Room RN · Retired U.S. Army Veteran</p>
-
-        <p class="text-ink/70 leading-relaxed mb-4">
-          Chris has spent his career on the front lines of human health. As an Emergency Room Registered Nurse,
-          he's seen firsthand what happens when the body breaks down — and how often those crises could have
-          been prevented with the right support, education, and tools.
-        </p>
-        <p class="text-ink/70 leading-relaxed mb-4">
-          His years of service in the U.S. Army instilled in him a deep commitment to discipline, integrity,
-          and showing up for others — values that run through everything WholeHearted does. He doesn't recommend
-          anything he hasn't personally vetted, and he brings a clinician's eye to every conversation about health.
-        </p>
-        <p class="text-ink/70 leading-relaxed mb-6">
-          Chris believes the best healthcare is preventive care — and that a faith-centered community is one
-          of the most powerful tools for lasting wellness.
-        </p>
-
-        <div class="flex flex-wrap gap-2">
-          {["Emergency Room RN", "U.S. Army Veteran", "Metabolic Health Advocate", "Faith & Wellness"].map((tag) => (
-            <span class="rounded-full bg-rose/10 text-rose text-xs font-medium px-3 py-1">{tag}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Divider -->
-  <div class="mx-auto my-4 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/20 to-transparent"></div>
-
-  <!-- Meet Molly -->
-  <section class="py-8 max-w-4xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-
-      <!-- Bio (left on desktop for Molly) -->
-      <div class="py-4 md:order-1">
         <p class="text-sage font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
         <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Molly Broad</h2>
         <p class="text-ink/50 text-sm mb-6">Functional Nutrition · Pastoral Counselor · BS Family & Child Studies</p>
@@ -126,13 +89,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           ))}
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="mx-auto my-4 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/20 to-transparent"></div>
+
+  <!-- Meet Chris -->
+  <section class="py-8 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+
+      <!-- Bio (left on desktop for Chris) -->
+      <div class="py-4 md:order-1">
+        <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
+        <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Chris Broad</h2>
+        <p class="text-ink/50 text-sm mb-6">Emergency Room RN · Retired U.S. Army Veteran</p>
+
+        <p class="text-ink/70 leading-relaxed mb-4">
+          Chris has spent his career on the front lines of human health. As an Emergency Room Registered Nurse,
+          he's seen firsthand what happens when the body breaks down — and how often those crises could have
+          been prevented with the right support, education, and tools.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-4">
+          His years of service in the U.S. Army instilled in him a deep commitment to discipline, integrity,
+          and showing up for others — values that run through everything WholeHearted does. He doesn't recommend
+          anything he hasn't personally vetted, and he brings a clinician's eye to every conversation about health.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-6">
+          Chris believes the best healthcare is preventive care — and that a faith-centered community is one
+          of the most powerful tools for lasting wellness.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          {["Emergency Room RN", "U.S. Army Veteran", "Metabolic Health Advocate", "Faith & Wellness"].map((tag) => (
+            <span class="rounded-full bg-rose/10 text-rose text-xs font-medium px-3 py-1">{tag}</span>
+          ))}
+        </div>
+      </div>
 
       <!-- Photo placeholder -->
       <div class="rounded-2xl overflow-hidden bg-ink/5 border border-ink/10 aspect-[4/5] flex flex-col items-center justify-center text-center p-8 md:order-2">
         <!-- Replace this div with an <img> tag when you have a photo:
-             <img src="/team/molly.jpg" alt="Molly Broad" class="w-full h-full object-cover object-top" />
+             <img src="/team/chris.jpg" alt="Chris Broad" class="w-full h-full object-cover object-top" />
         -->
-        <div class="w-20 h-20 rounded-full bg-sage/20 flex items-center justify-center text-sage text-3xl mb-4">M</div>
+        <div class="w-20 h-20 rounded-full bg-rose/20 flex items-center justify-center text-rose text-3xl mb-4">C</div>
         <p class="text-ink/40 text-sm">Photo coming soon</p>
       </div>
 
