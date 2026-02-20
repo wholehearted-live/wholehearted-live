@@ -282,6 +282,56 @@ import { LINKS } from "../data/links";
       <h2 class="text-3xl font-semibold text-ink tracking-tight">Before & After the Feel Great System</h2>
       <p class="mt-3 text-ink/60 max-w-xl mx-auto">It's not just about the scale. It's about how you feel every single day.</p>
     </div>
+
+    <!-- Photo Stories — add real before/after images to /public/transformations/ -->
+    <!-- Each entry: beforeImg, afterImg, name, result, quote -->
+    <!-- To add a new person: drop their photos in public/transformations/ and add an entry below -->
+    {(() => {
+      const stories = [
+        // {
+        //   beforeImg: "/transformations/lisa-before.jpg",
+        //   afterImg:  "/transformations/lisa-after.jpg",
+        //   name:      "Lisa M.",
+        //   result:    "Lost 18 lbs · More energy than her 30s",
+        //   quote:     "I feel like myself again — actually, better.",
+        // },
+        // {
+        //   beforeImg: "/transformations/david-before.jpg",
+        //   afterImg:  "/transformations/david-after.jpg",
+        //   name:      "David R.",
+        //   result:    "A1C from 8.1 → 6.4 in four months",
+        //   quote:     "My doctor was shocked. I wasn't.",
+        // },
+      ];
+
+      if (stories.length === 0) return null;
+
+      return (
+        <div class="grid sm:grid-cols-2 gap-8 mb-12">
+          {stories.map(({ beforeImg, afterImg, name, result, quote }) => (
+            <div class="rounded-2xl border border-ink/10 bg-white/70 overflow-hidden">
+              <div class="grid grid-cols-2">
+                <div class="relative">
+                  <img src={beforeImg} alt={`${name} before`} class="w-full h-56 object-cover object-top" />
+                  <span class="absolute bottom-2 left-2 bg-ink/60 text-white text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide">Before</span>
+                </div>
+                <div class="relative">
+                  <img src={afterImg} alt={`${name} after`} class="w-full h-56 object-cover object-top" />
+                  <span class="absolute bottom-2 left-2 bg-rose text-white text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide">After</span>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="font-semibold text-ink">{name}</p>
+                <p class="text-xs text-rose font-medium mt-0.5 mb-2">{result}</p>
+                <p class="text-sm text-ink/65 italic">"{quote}"</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+    })()}
+
+    <!-- Text-based Before / After (always visible) -->
     <div class="rounded-2xl border border-ink/10 overflow-hidden">
       <div class="grid md:grid-cols-2">
         <!-- Before -->
@@ -326,6 +376,7 @@ import { LINKS } from "../data/links";
         </div>
       </div>
     </div>
+
     <div class="mt-8 text-center">
       <a
         href={LINKS.unicity.tryIt}
