@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@source "../../SRC/**/*.astro";
+
+@theme {
+  --color-ink: #0f172a;
+  --color-ivory: #fafaf7;
+  --color-rose: #dc446e;
+  --color-wine: #7a1f2b;
+  --color-sage: #487d60;
+  --color-gold: #c6a85d;
+}
+
+:root {
+  --font-brand: "Libre Baskerville", serif;
+  --font-ui: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-ui);
+  background:
+    radial-gradient(900px 500px at 20% 0%, color-mix(in srgb, var(--color-rose) 10%, transparent), transparent 55%),
+    radial-gradient(800px 500px at 90% 10%, color-mix(in srgb, var(--color-sage) 10%, transparent), transparent 55%),
+    var(--color-ivory);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-wine);
+}
+
+a:hover {
+  color: var(--color-rose);
+}
+
+.btn-primary {
+  background: color-mix(in srgb, var(--color-rose) 88%, var(--color-ivory));
+  color: white;
+  border: 1px solid color-mix(in srgb, var(--color-rose) 35%, transparent);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--color-rose) 70%, var(--color-ivory));
+}
+
+.section {
+  padding-block: 4rem;
+}
+
+.surface {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 8%, transparent);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.brand-font {
+  font-family: var(--font-brand);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}

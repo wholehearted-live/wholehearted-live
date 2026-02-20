@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { LINKS } from "../data/links";
+---
+
+<BaseLayout title="Shop | Wholehearted" description="Shop through us via Unicity’s secure website.">
+  <section class="py-14 sm:py-20">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl font-semibold tracking-tight text-ink">Shop through us</h1>
+      <p class="mt-5 text-lg text-ink/70 leading-relaxed">
+        You'll complete checkout on Unicity's secure website. When you shop through our links, your subscription stays connected
+        to us so we can support you with education, accountability, and encouragement.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <h3 class="font-semibold text-ink">Start a subscription</h3>
+        <p class="mt-2 text-sm text-ink/70">The simplest way to get started with consistent support.</p>
+        <a
+          class="mt-5 inline-flex rounded-xl bg-rose px-5 py-3 text-sm font-semibold text-white hover:bg-rose/85"
+          href={LINKS.unicity.subscription}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start subscription
+        </a>
+      </div>
+
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <h3 class="font-semibold text-ink">Enroll / connect</h3>
+        <p class="mt-2 text-sm text-ink/70">If you need the official enrollment or customer path.</p>
+        <a
+          class="mt-5 inline-flex rounded-xl border border-ink/10 bg-white/70 px-5 py-3 text-sm font-semibold text-ink/80 hover:bg-white"
+          href={LINKS.unicity.enroll}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Continue on Unicity
+        </a>
+      </div>
+
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <h3 class="font-semibold text-ink">Featured link</h3>
+        <p class="mt-2 text-sm text-ink/70">A featured product page you want to highlight.</p>
+        <a
+          class="mt-5 inline-flex rounded-xl border border-ink/10 bg-white/70 px-5 py-3 text-sm font-semibold text-ink/80 hover:bg-white"
+          href={LINKS.unicity.flagshipProduct}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Unicity
+        </a>
+      </div>
+    </div>
+
+    <p class="mt-8 text-xs text-ink/55 max-w-3xl">
+      Note: This site provides education and encouragement. Product availability, pricing, and checkout are handled by Unicity.
+    </p>
+  </section>
+</BaseLayout>

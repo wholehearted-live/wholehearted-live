@@ -1,0 +1,92 @@
+---
+import Logo from "../assets/logo-hearts.png";
+
+const nav = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Shop", href: "/shop" },
+  { label: "Live", href: "/live" },
+  { label: "App", href: "/app" },
+];
+
+// Highlight active link
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+---
+
+<header class="border-b border-ink/10">
+  <div class="mx-auto flex max-w-6xl items-center gap-6 px-4 py-4">
+    <!-- Brand (left-aligned) -->
+    <a href="/" class="flex items-center gap-3">
+      <div class="h-10 w-10 shrink-0 text-ink hover:text-rose transition-colors">
+        <img src={Logo.src} alt="WholeHearted logo" class="h-full w-full object-contain" />
+      </div>
+
+      <div class="leading-tight">
+        <div class="brand-font text-lg font-normal tracking-tight text-ink">
+          WholeHearted
+        </div>
+        <div class="text-xs text-slate-500 tracking-wide">
+          .live
+        </div>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="ml-2 hidden items-center gap-1 md:flex">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "rounded-lg px-3 py-2 text-sm font-medium transition",
+              isActive(item.href)
+                ? "bg-rose text-white"
+                : "text-ink/70 hover:text-ink hover:bg-ink/5",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- Right side actions -->
+    <div class="ml-auto flex items-center gap-2">
+      <a
+        href="/shop"
+        class="hidden rounded-lg border border-ink/20 px-3 py-2 text-sm font-medium text-ink hover:bg-ink/5 md:inline-flex"
+      >
+        Browse
+      </a>
+      <a
+        href="/live"
+        class="rounded-lg bg-rose px-3 py-2 text-sm font-medium text-white hover:bg-rose/85"
+      >
+        Go Live
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div class="mx-auto max-w-6xl px-4 pb-4 md:hidden">
+    <div class="flex flex-wrap gap-2">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "rounded-lg px-3 py-2 text-sm font-medium transition",
+              isActive(item.href)
+                ? "bg-rose text-white"
+                : "bg-ink/5 text-ink/70 hover:bg-ink/10",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</header>

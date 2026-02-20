@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Logo from "../assets/logo-hearts.png";
+---
+
+<BaseLayout title="WholeHearted — Faith, Wellness & Community">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-linear-to-b from-ivory via-ivory to-white py-24">
+    <div class="absolute inset-0 flex items-start justify-center pointer-events-none">
+      <div class="mt-32 h-96 w-96 rounded-full bg-rose/10 blur-3xl"></div>
+    </div>
+    <div class="text-center max-w-3xl mx-auto">
+      <img
+        src={Logo.src}
+        alt="WholeHearted"
+        width="192"
+        height="192"
+        class="h-48 w-48 max-h-48 max-w-48 mx-auto mb-8 object-contain bg-transparent"
+      />
+      <h1 class="brand-font text-5xl md:text-6xl text-ink tracking-tight">
+        Nourish Body & Spirit, <span class="text-rose">Together</span>
+      </h1>
+      <span class="mx-auto mt-4 block h-1.5 w-24 rounded-full bg-wine"></span>
+      <p class="mt-6 max-w-xl text-base text-ink/70 mx-auto">
+        WholeHearted is a faith-centered community where wellness meets purpose.
+        Join us for live education, real connection, and a journey toward wholehearted living.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <a
+          href="/live"
+          class="inline-flex items-center justify-center rounded-xl bg-rose px-8 py-4 text-ivory font-medium shadow-lg shadow-rose/25 transition hover:translate-y-[-1px] hover:shadow-xl"
+        >
+          Join the Next Session
+        </a>
+        <a
+          href="/about"
+          class="text-sm font-medium text-ink/70 hover:text-ink"
+        >
+          Learn More →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand ribbon divider -->
+  <div class="mx-auto my-16 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
+
+  <!-- How WholeHearted Works -->
+  <section class="py-16">
+    <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink text-center mb-12">
+      How It Works
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+      <!-- Step 1 -->
+      <div class="text-center">
+        <div class="h-14 w-14 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-rose/20 text-rose text-2xl mb-5">
+          1
+        </div>
+        <h3 class="text-lg font-semibold text-ink mb-2">Join Live Sessions</h3>
+        <p class="text-ink/70">
+          Connect in real-time through live streams. Learn from wellness conversations rooted in faith, and get your questions answered.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center">
+        <div class="h-14 w-14 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-sage/25 text-sage text-2xl mb-5">
+          2
+        </div>
+        <h3 class="text-lg font-semibold text-ink mb-2">Explore Wellness Resources</h3>
+        <p class="text-ink/70">
+          Discover trusted tools for your health journey, including science-backed Unicity products designed to support metabolic wellness.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center">
+        <div class="h-14 w-14 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-gold/20 text-gold text-2xl mb-5">
+          3
+        </div>
+        <h3 class="text-lg font-semibold text-ink mb-2">Grow in Community</h3>
+        <p class="text-ink/70">
+          Walk alongside others who share your values. Find encouragement, accountability, and friendship on the journey to wholehearted living.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand ribbon divider -->
+  <div class="mx-auto my-8 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
+
+  <!-- Next Live Session -->
+  <section class="py-16">
+    <div class="surface max-w-2xl mx-auto px-8 py-10 text-center">
+      <p class="text-sm font-medium text-wine uppercase tracking-wide mb-3">Next Live Session</p>
+      <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink mb-2">
+        Wellness Q&A — Live
+      </h2>
+      <p class="text-ink/50 text-sm mb-4">Thursday evenings · 7:00 PM CT</p>
+      <p class="text-ink/70 max-w-md mx-auto mb-8">
+        Bring your questions, hear real stories, and learn practical wellness tips — all in a warm, faith-filled setting.
+      </p>
+      <a
+        href="/live"
+        class="inline-flex items-center justify-center rounded-xl bg-rose px-8 py-3 text-white font-semibold hover:bg-rose/85 transition shadow-lg shadow-rose/25"
+      >
+        Join the Next Session
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand ribbon divider -->
+  <div class="mx-auto my-8 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
+
+  <!-- Values Callout -->
+  <section class="py-16">
+    <div class="rounded-3xl bg-sage/20 py-12 px-8">
+      <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink text-center mb-10">
+        What We Stand For
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
+        <div>
+          <div class="h-12 w-12 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-rose/20 text-rose text-xl mb-3">
+            ♥
+          </div>
+          <h3 class="text-lg font-semibold text-ink mb-1">Faith First</h3>
+          <p class="text-ink/70 text-sm">
+            Rooted in faith — we believe lasting wellness starts with a whole heart.
+          </p>
+        </div>
+        <div>
+          <div class="h-12 w-12 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-sage/25 text-sage text-xl mb-3">
+            ✓
+          </div>
+          <h3 class="text-lg font-semibold text-ink mb-1">Integrity Always</h3>
+          <p class="text-ink/70 text-sm">
+            No gimmicks. We share what works, recommend what we use, and tell the truth.
+          </p>
+        </div>
+        <div>
+          <div class="h-12 w-12 mx-auto shrink-0 flex items-center justify-center rounded-2xl bg-gold/20 text-gold text-xl mb-3">
+            ✦
+          </div>
+          <h3 class="text-lg font-semibold text-ink mb-1">Real Support</h3>
+          <p class="text-ink/70 text-sm">
+            Not followers — family. We show up, encourage, and celebrate wins together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft CTA -->
+  <section class="py-16">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink mb-4">
+        Take the Next Step
+      </h2>
+      <p class="text-ink/70 max-w-xl mx-auto mb-8">
+        Whether you're exploring wellness for the first time or deepening a journey you've already started,
+        there's a place for you here. Come as you are.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/live"
+          class="inline-flex items-center justify-center rounded-xl bg-rose px-7 py-3 text-white font-semibold hover:bg-rose/85 transition shadow-lg shadow-rose/25"
+        >
+          Watch Live
+        </a>
+        <a
+          href="/shop"
+          class="inline-flex items-center justify-center rounded-xl border border-ink/30 px-7 py-3 text-ink hover:bg-ink/5 transition"
+        >
+          Explore Products
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

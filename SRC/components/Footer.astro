@@ -1,0 +1,38 @@
+---
+import { LINKS } from "../data/links";
+---
+
+<footer class="mt-16 border-t border-ink/5">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-md">
+        <div class="text-sm font-semibold text-ink">Wholehearted</div>
+        <p class="mt-2 text-sm text-ink/70">
+          Living well — body, mind, and spirit.
+        </p>
+        <p class="mt-4 text-xs text-ink/60 leading-relaxed">
+          Wholehearted provides wellness education, encouragement, and lifestyle support.
+          It is not a substitute for medical advice or licensed mental health care.
+        </p>
+      </div>
+
+      <div class="text-sm">
+        <div class="font-semibold text-ink/80">Contact</div>
+        <a class="mt-2 block text-ink/70 hover:text-ink" href={`mailto:${LINKS.contact.email}`}>
+          {LINKS.contact.email}
+        </a>
+
+        <div class="mt-4 font-semibold text-ink/80">Social</div>
+        <div class="mt-2 flex gap-3 text-ink/70">
+          <a class="hover:text-ink" href={LINKS.social.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="hover:text-ink" href={LINKS.social.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a class="hover:text-ink" href={LINKS.social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-xs text-ink/50">
+      © {new Date().getFullYear()} Wholehearted. All rights reserved.
+    </div>
+  </div>
+</footer>
