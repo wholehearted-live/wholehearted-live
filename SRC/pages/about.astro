@@ -2,110 +2,215 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About — WholeHearted" description="Why WholeHearted exists and where it's going.">
+<BaseLayout title="About — WholeHearted" description="Meet Chris and Molly Broad — the hearts behind WholeHearted.live.">
+
   <!-- Hero Section -->
   <section class="relative overflow-hidden py-20 -mx-4 px-4">
     <div class="absolute inset-0 -z-10 bg-gradient-to-r from-rose/15 via-ivory via-50% to-sage/10"></div>
     <div class="text-center max-w-3xl mx-auto">
       <p class="text-sm font-medium text-wine uppercase tracking-wide mb-4">Our Story</p>
       <h1 class="brand-font text-4xl md:text-5xl font-medium tracking-tight text-ink">
-        Living Wholeheartedly
+        Meet the Broads
       </h1>
       <span class="mx-auto mt-4 block h-1.5 w-24 rounded-full bg-wine"></span>
       <p class="mt-6 max-w-xl text-base text-ink/70 mx-auto">
-        More than a brand — a commitment to nurturing body, mind, and spirit through
-        faith-centered wellness and genuine community.
+        A nurse, a veteran, a nutritionist, and a pastoral counselor — and most importantly, a husband and wife
+        who believe you were made to feel whole.
       </p>
     </div>
   </section>
 
-  <!-- Mission Section -->
-  <section class="py-16">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink mb-6">Why WholeHearted?</h2>
-      <p class="text-ink/70 leading-relaxed mb-6">
-        WholeHearted was born from a simple belief: true wellness isn't just about what we put in our bodies —
-        it's about how we live, who we walk with, and Whose we are.
+  <!-- Chris & Molly Together -->
+  <section class="py-16 max-w-4xl mx-auto">
+    <div class="rounded-2xl border border-ink/10 bg-white/70 p-8 md:p-12">
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-4">Why We Started WholeHearted</p>
+      <p class="text-ink/75 leading-relaxed mb-5 text-lg">
+        WholeHearted didn't start as a business idea — it started as a conviction.
       </p>
-      <p class="text-ink/70 leading-relaxed mb-6">
-        In a world full of quick fixes and empty promises, we wanted to create something different.
-        A space where faith and wellness meet. Where education empowers rather than overwhelms.
-        Where community means showing up for each other — not just scrolling past.
+      <p class="text-ink/70 leading-relaxed mb-5">
+        Between us, we've spent decades in emergency medicine, military service, functional nutrition, and pastoral
+        care. We've sat with people in their hardest moments — in the ER, in counseling rooms, in prayer. And
+        over and over, we saw the same pattern: people suffering from conditions that were largely preventable,
+        feeling unsupported, and not knowing where to turn.
+      </p>
+      <p class="text-ink/70 leading-relaxed mb-5">
+        When we discovered the Feel Great System through Unicity, we didn't see a product — we saw a tool that
+        aligned with everything we already believed about how the body was designed to work. We tried it ourselves.
+        We saw real results. And we knew we had to share it.
       </p>
       <p class="text-ink/70 leading-relaxed">
-        We partner with Unicity because we believe in their science-backed approach to metabolic health.
-        But products are just one piece. The real transformation happens when we commit to living
-        wholeheartedly — together.
+        But more than sharing a product, we wanted to build something with a soul — a community where faith,
+        science, and genuine care come together. That's WholeHearted. And we're glad you're here.
       </p>
+    </div>
+  </section>
+
+  <!-- Meet Chris -->
+  <section class="py-8 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+
+      <!-- Photo placeholder -->
+      <div class="rounded-2xl overflow-hidden bg-ink/5 border border-ink/10 aspect-[4/5] flex flex-col items-center justify-center text-center p-8">
+        <!-- Replace this div with an <img> tag when you have a photo:
+             <img src="/team/chris.jpg" alt="Chris Broad" class="w-full h-full object-cover object-top" />
+        -->
+        <div class="w-20 h-20 rounded-full bg-rose/20 flex items-center justify-center text-rose text-3xl mb-4">C</div>
+        <p class="text-ink/40 text-sm">Photo coming soon</p>
+      </div>
+
+      <!-- Bio -->
+      <div class="py-4">
+        <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
+        <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Chris Broad</h2>
+        <p class="text-ink/50 text-sm mb-6">Emergency Room RN · Retired U.S. Army Veteran</p>
+
+        <p class="text-ink/70 leading-relaxed mb-4">
+          Chris has spent his career on the front lines of human health. As an Emergency Room Registered Nurse,
+          he's seen firsthand what happens when the body breaks down — and how often those crises could have
+          been prevented with the right support, education, and tools.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-4">
+          His years of service in the U.S. Army instilled in him a deep commitment to discipline, integrity,
+          and showing up for others — values that run through everything WholeHearted does. He doesn't recommend
+          anything he hasn't personally vetted, and he brings a clinician's eye to every conversation about health.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-6">
+          Chris believes the best healthcare is preventive care — and that a faith-centered community is one
+          of the most powerful tools for lasting wellness.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          {["Emergency Room RN", "U.S. Army Veteran", "Metabolic Health Advocate", "Faith & Wellness"].map((tag) => (
+            <span class="rounded-full bg-rose/10 text-rose text-xs font-medium px-3 py-1">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="mx-auto my-4 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/20 to-transparent"></div>
+
+  <!-- Meet Molly -->
+  <section class="py-8 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+
+      <!-- Bio (left on desktop for Molly) -->
+      <div class="py-4 md:order-1">
+        <p class="text-sage font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
+        <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Molly Broad</h2>
+        <p class="text-ink/50 text-sm mb-6">Functional Nutrition · Pastoral Counselor · BS Family & Child Studies</p>
+
+        <p class="text-ink/70 leading-relaxed mb-4">
+          Molly brings a rare combination of gifts to WholeHearted — the mind of a trained nutritionist, the
+          heart of a pastoral counselor, and the grounding of a family systems scholar.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-4">
+          Her training in functional nutrition means she understands not just what people should eat, but
+          why their bodies respond the way they do — and how to support real, sustainable change from the inside out.
+          She speaks the same scientific language as the Feel Great System.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-4">
+          As a volunteer pastoral counselor at her church, Molly has walked alongside countless people through
+          grief, transition, and healing. She knows that wellness is never just physical — it's emotional,
+          relational, and deeply spiritual.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-6">
+          Her degree in Family and Child Studies shapes how she thinks about community — not as a network,
+          but as a family. Everyone who joins WholeHearted is welcomed as one.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          {["Functional Nutrition", "Pastoral Counselor", "Family & Child Studies", "Community Builder"].map((tag) => (
+            <span class="rounded-full bg-sage/15 text-sage text-xs font-medium px-3 py-1">{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Photo placeholder -->
+      <div class="rounded-2xl overflow-hidden bg-ink/5 border border-ink/10 aspect-[4/5] flex flex-col items-center justify-center text-center p-8 md:order-2">
+        <!-- Replace this div with an <img> tag when you have a photo:
+             <img src="/team/molly.jpg" alt="Molly Broad" class="w-full h-full object-cover object-top" />
+        -->
+        <div class="w-20 h-20 rounded-full bg-sage/20 flex items-center justify-center text-sage text-3xl mb-4">M</div>
+        <p class="text-ink/40 text-sm">Photo coming soon</p>
+      </div>
+
     </div>
   </section>
 
   <!-- Brand ribbon divider -->
-  <div class="mx-auto my-8 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
+  <div class="mx-auto my-12 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
+
+  <!-- Together — the WholeHearted difference -->
+  <section class="py-8 max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Why It Matters</p>
+      <h2 class="text-3xl font-semibold text-ink tracking-tight">Body. Mind. Spirit.</h2>
+      <p class="mt-4 text-ink/60 max-w-2xl mx-auto">Together, Chris and Molly bring credentials and calling that cover the whole person.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 text-center">
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <div class="w-12 h-12 rounded-full bg-rose/15 flex items-center justify-center text-rose text-xl mx-auto mb-4">🩺</div>
+        <h3 class="font-semibold text-ink mb-2">Body</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Chris's clinical background as an ER nurse and his functional knowledge of metabolic health means real, medically grounded guidance.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <div class="w-12 h-12 rounded-full bg-sage/15 flex items-center justify-center text-sage text-xl mx-auto mb-4">🌿</div>
+        <h3 class="font-semibold text-ink mb-2">Mind</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Molly's functional nutrition training and family systems education means she addresses the whole lifestyle — not just what's on your plate.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
+        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-gold text-xl mx-auto mb-4">🙏</div>
+        <h3 class="font-semibold text-ink mb-2">Spirit</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Molly's pastoral counseling and their shared faith keeps this community rooted in what matters most — purpose, grace, and belonging.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand ribbon divider -->
+  <div class="mx-auto my-12 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
 
   <!-- Values Section -->
-  <section class="py-16">
+  <section class="py-8">
     <div class="rounded-3xl bg-sage/15 py-16 px-8">
       <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink text-center mb-12">
         What We Stand For
       </h2>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Value 1 -->
         <div class="flex gap-4">
-          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-rose/20 text-rose text-xl">
-            ♥
-          </div>
+          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-rose/20 text-rose text-xl">♥</div>
           <div>
             <h3 class="text-lg font-semibold text-ink mb-1">Faith First</h3>
-            <p class="text-ink/70 text-sm">
-              Everything we do is rooted in faith. We believe lasting wellness starts with a whole heart aligned with God's purpose.
-            </p>
+            <p class="text-ink/70 text-sm">Everything we do is rooted in faith. We believe lasting wellness starts with a whole heart aligned with God's purpose.</p>
           </div>
         </div>
-
-        <!-- Value 2 -->
         <div class="flex gap-4">
-          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-sage/25 text-sage text-xl">
-            ✓
-          </div>
+          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-sage/25 text-sage text-xl">✓</div>
           <div>
             <h3 class="text-lg font-semibold text-ink mb-1">Integrity Always</h3>
-            <p class="text-ink/70 text-sm">
-              No gimmicks, no hype. We share what works, recommend what we use, and tell the truth — even when it's not easy.
-            </p>
+            <p class="text-ink/70 text-sm">No gimmicks, no hype. We share what works, recommend what we use, and tell the truth — even when it's not easy.</p>
           </div>
         </div>
-
-        <!-- Value 3 -->
         <div class="flex gap-4">
-          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-gold/20 text-gold text-xl">
-            ✦
-          </div>
+          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-gold/20 text-gold text-xl">✦</div>
           <div>
             <h3 class="text-lg font-semibold text-ink mb-1">Education Over Sales</h3>
-            <p class="text-ink/70 text-sm">
-              We teach, we share, we answer questions. An informed community makes better choices — and that's the goal.
-            </p>
+            <p class="text-ink/70 text-sm">We teach, we share, we answer questions. An informed community makes better choices — and that's the goal.</p>
           </div>
         </div>
-
-        <!-- Value 4 -->
         <div class="flex gap-4">
-          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-rose/15 text-rose text-xl">
-            ❋
-          </div>
+          <div class="h-12 w-12 shrink-0 flex items-center justify-center rounded-2xl bg-rose/15 text-rose text-xl">❋</div>
           <div>
             <h3 class="text-lg font-semibold text-ink mb-1">Real Community</h3>
-            <p class="text-ink/70 text-sm">
-              Not followers — family. We show up, we encourage, we celebrate wins together. This journey is better shared.
-            </p>
+            <p class="text-ink/70 text-sm">Not followers — family. We show up, we encourage, we celebrate wins together. This journey is better shared.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quote/Scripture Section -->
+  <!-- Scripture -->
   <section class="py-16">
     <div class="max-w-2xl mx-auto text-center">
       <div class="mx-auto my-8 h-px max-w-xs bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
@@ -117,30 +222,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-16">
+  <!-- CTA -->
+  <section class="py-8 mb-8">
     <div class="rounded-3xl bg-sage/20 py-20 px-8 text-center">
       <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink mb-4">
         Ready to join the journey?
       </h2>
       <p class="text-ink/70 max-w-xl mx-auto mb-8">
         Whether you're curious about wellness, looking for community, or ready to dive in —
-        we'd love to have you.
+        we'd love to have you. Come as you are.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/live"
-          class="inline-flex items-center justify-center rounded-xl bg-rose px-7 py-3 text-white font-semibold hover:bg-rose/85 transition shadow-lg shadow-rose/25"
+          class="inline-flex items-center justify-center rounded-xl bg-rose px-7 py-3 text-white font-semibold hover:bg-rose/85 transition"
         >
-          Watch Live
+          Join a Live Session
         </a>
         <a
           href="/shop"
           class="inline-flex items-center justify-center rounded-xl border border-ink/30 px-7 py-3 text-ink hover:bg-ink/5 transition"
         >
-          Explore Products
+          Explore the Feel Great System
         </a>
       </div>
     </div>
   </section>
+
 </BaseLayout>
