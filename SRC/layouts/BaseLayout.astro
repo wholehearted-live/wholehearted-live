@@ -3,7 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
-const { title = "WholeHearted", description = "WholeHearted.live" } = Astro.props;
+const { title = "WholeHearted", description = "WholeHearted.live", index = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,8 +13,8 @@ const { title = "WholeHearted", description = "WholeHearted.live" } = Astro.prop
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
 
-  <!-- 🚫 Prevent search engine indexing until launch -->
-  <meta name="robots" content="noindex, nofollow" />
+  <!-- Search engine indexing: controlled per-page via `index` prop -->
+  <meta name="robots" content={index ? "index, follow" : "noindex, nofollow"} />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
