@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+
+const { title = "WholeHearted", description = "WholeHearted.live" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <!-- Standalone event page — not indexed until site is ready -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>{title}</title>
+
+  <!-- GoHighLevel tracking -->
+  <script
+    src="https://link.msgsndr.com/js/external-tracking.js"
+    data-tracking-id="tk_252c40d4690b453f9f9795810f909b8f"
+  ></script>
+</head>
+
+<body class="min-h-screen text-ink">
+
+  <!-- ======================================================
+       STANDALONE HEADER — logo only, no site navigation
+  ======================================================= -->
+  <header class="border-b border-ink/10 bg-white/80 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-4xl items-center justify-center px-4 py-4">
+      <img
+        src="/logo-wholehearted-living.png"
+        alt="WholeHearted Living"
+        class="h-20 object-contain"
+      />
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <slot />
+  </main>
+
+  <!-- ======================================================
+       MINIMAL FOOTER — no internal navigation links
+  ======================================================= -->
+  <footer class="mt-16 border-t border-ink/5">
+    <div class="mx-auto max-w-6xl px-4 py-10 text-center">
+      <p class="text-xs text-ink/50">
+        © {new Date().getFullYear()} WholeHearted. All rights reserved.
+      </p>
+      <p class="mt-2 text-xs text-ink/40 max-w-lg mx-auto leading-relaxed">
+        WholeHearted provides wellness education, encouragement, and lifestyle support.
+        It is not a substitute for medical advice or licensed mental health care.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

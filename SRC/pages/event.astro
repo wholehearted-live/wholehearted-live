@@ -1,12 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import EventLayout from "../layouts/EventLayout.astro";
 import { LINKS } from "../data/links";
 ---
 
-<BaseLayout
+<EventLayout
   title="Free Event — Dr. Kenny | Metabolic Reset | April 29 · Dayton, OH | WholeHearted"
   description="Join Dr. Kenny (Chiropractor) on April 29th at 6pm in Dayton, OH. Discover how a simple nutraceutical can help with Diabetes, High BP, Cholesterol, PCOS, Weight, Brain Fog & more."
-  index={true}
 >
 
   <!-- ============================================================
@@ -254,22 +253,16 @@ import { LINKS } from "../data/links";
 
     <div class="surface max-w-3xl mx-auto px-8 py-10">
       <div class="flex flex-col sm:flex-row gap-8 items-start">
-        <!-- Dr. Kenny's photo — save his headshot as public/dr-kenny.jpg -->
+        <!-- Dr. Kenny's headshot -->
         <div class="shrink-0 mx-auto sm:mx-0">
           <img
-            src="/Dr-Kenny.png"
+            src="/dr-kenny.jpg"
             alt="Dr. Kenny — Chiropractor & Metabolic Health Educator"
             width="144"
             height="144"
             class="h-36 w-36 rounded-full object-cover object-top border-4"
             style="border-color:#c6a85d;"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           />
-          <!-- Fallback if photo not yet added -->
-          <div class="h-36 w-36 rounded-full border-4 items-center justify-center text-5xl bg-gold/10 hidden"
-               style="border-color:#c6a85d; display:none;">
-            👨‍⚕️
-          </div>
           <p class="mt-2 text-center text-xs text-ink/50 italic">Dr. Kenny</p>
         </div>
         <div>
@@ -791,4 +784,4 @@ import { LINKS } from "../data/links";
     });
   </script>
 
-</BaseLayout>
+</EventLayout>
