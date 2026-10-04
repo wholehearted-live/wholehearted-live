@@ -70,3 +70,10 @@ Still to do:
 - [ ] Remove "Great Prompts to build your Unicity business.pdf" from the KB; drop one GLP-1 duplicate; review doctor-leave-behind.
 - [ ] Build an email nurture series for "sent link" + not purchased (emails are collected but never used).
 - [ ] A2P 10DLC registration before any marketing texts. Fill in agent "Business Name".
+
+## GoHighLevel — Email Nurture (built Oct 4, 2026, DRAFT — not published)
+Workflow "Email Nurture - Sent Link, Not Purchased" (folder 1.0 PPP Automations).
+Trigger: tag added "sent link". Steps: Email 1 → 2d → Email 2 → 2d → Email 3 → 2d → Email 4 → 3d → Email 5 → 3d → Email 6 → 4d → Email 7 → 5d → Email 8 → Goal.
+Goal event: tag added "purchased feel great system" — contact jumps to the goal and stops getting emails.
+From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/email-nurture-series.md`; HTML per email: `ghl/emails/` (regenerate with `node ghl/build-email-html.cjs`).
+- [ ] Send a test email, confirm GHL adds an unsubscribe link, then Publish.
