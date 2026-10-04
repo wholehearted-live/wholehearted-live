@@ -14,7 +14,7 @@ export const LINKS = {
   social: {
     facebook: "https://www.facebook.com/MetabolicMolly/",
     instagram: "https://www.instagram.com/metabolicmolly/",
-    tiktok: "",
+    tiktok: "https://www.tiktok.com/@metabolic_molly",
     youtube: "",
   },
 
