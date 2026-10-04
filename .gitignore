@@ -26,3 +26,4 @@ pnpm-debug.log*
 # local Claude files
 .claude/
 Claude outputs/
+preview-screens/
