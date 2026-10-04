@@ -10,11 +10,12 @@ export const LINKS = {
     flagshipProduct: "https://ufeelgreat.com/c/wholehearted",
   },
 
+  // Leave a link as "" until the real profile exists — empty ones are hidden in the footer.
   social: {
-    facebook: "https://facebook.com/",
-    tiktok: "https://tiktok.com/",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    facebook: "https://www.facebook.com/MetabolicMolly/",
+    instagram: "https://www.instagram.com/metabolicmolly/",
+    tiktok: "",
+    youtube: "",
   },
 
   contact: {

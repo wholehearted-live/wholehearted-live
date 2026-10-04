@@ -30,9 +30,9 @@ import { LINKS } from "../data/links";
 
         <div class="mt-4 font-semibold text-ink/80">Social</div>
         <div class="mt-2 flex gap-3 text-ink/70">
-          <a class="hover:text-ink" href={LINKS.social.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="hover:text-ink" href={LINKS.social.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a class="hover:text-ink" href={LINKS.social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+          {LINKS.social.facebook && <a class="hover:text-ink" href={LINKS.social.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}
+          {LINKS.social.tiktok && <a class="hover:text-ink" href={LINKS.social.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>}
+          {LINKS.social.instagram && <a class="hover:text-ink" href={LINKS.social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>}
         </div>
       </div>
     </div>
