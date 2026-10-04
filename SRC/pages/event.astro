@@ -579,7 +579,6 @@ import { LINKS } from "../data/links";
           </div>
 
           <button type="submit"
-            onclick="trackFB('CompleteRegistration',{content_name:'April 29 Event'})"
             class="w-full rounded-xl bg-rose py-4 text-white font-bold text-base transition hover:bg-rose/85 shadow-md shadow-rose/20 mt-2">
             ✅ Yes! Reserve My FREE Seat — April 29th →
           </button>
@@ -731,23 +730,114 @@ import { LINKS } from "../data/links";
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
+    // ── GoHighLevel Inbound Webhook ────────────────────────────
+    var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/7N69JUsYpwGuiYRdR7Me/webhook-trigger/dd030c5c-556a-4a0c-839a-911f79f58b0a';
+
+    // Capture attribution context (UTMs, click IDs, referrer, landing URL)
+    function getAttribution() {
+      var params = new URLSearchParams(window.location.search);
+      return {
+        utm_source:   params.get('utm_source')   || '',
+        utm_medium:   params.get('utm_medium')   || '',
+        utm_campaign: params.get('utm_campaign') || '',
+        utm_term:     params.get('utm_term')     || '',
+        utm_content:  params.get('utm_content')  || '',
+        fbclid:       params.get('fbclid')       || '',
+        ttclid:       params.get('ttclid')       || '',
+        gclid:        params.get('gclid')        || '',
+        referrer:     document.referrer || '',
+        landing_url:  window.location.href,
+        landing_path: window.location.pathname,
+        submitted_at: new Date().toISOString(),
+        user_agent:   navigator.userAgent || ''
+      };
+    }
+
+    // POST payload to GHL with loading state + error handling
+    function postToGHL(btn, payload, onSuccess) {
+      var originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Submitting…';
+      fetch(GHL_WEBHOOK, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+        keepalive: true
+      })
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        onSuccess();
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        alert("Sorry — we couldn't submit your info. Please try again, or email hello@wholehearted.live.");
+        console.error('GHL submit failed', err);
+      });
+    }
+
     // ── Quiz submit ────────────────────────────────────────────
     function submitQuiz(e) {
       e.preventDefault();
-      trackFB('Lead', { content_name: 'Metabolic Quiz' });
-      trackTT('SubmitForm', { content_name: 'Metabolic Quiz' });
-      document.getElementById('quiz-wrapper').style.display = 'none';
-      document.getElementById('quiz-result').style.display = 'block';
+      var form = e.target;
+      var btn  = form.querySelector('button[type=submit]');
+      var fd   = new FormData(form);
+
+      // Score: a=3 (most severe), b=2, c=1 — range 4-12
+      var scoreMap = { a: 3, b: 2, c: 1 };
+      var q1 = fd.get('q1'), q2 = fd.get('q2'), q3 = fd.get('q3'), q4 = fd.get('q4');
+      var score = (scoreMap[q1]||0) + (scoreMap[q2]||0) + (scoreMap[q3]||0) + (scoreMap[q4]||0);
+      var category = score >= 9 ? 'high' : score >= 6 ? 'moderate' : 'low';
+
+      var payload = Object.assign({
+        lead_type:     'quiz',
+        first_name:    fd.get('fn'),
+        last_name:     fd.get('ln'),
+        email:         fd.get('em'),
+        phone:         fd.get('ph') || '',
+        quiz_q1:       q1,
+        quiz_q2:       q2,
+        quiz_q3:       q3,
+        quiz_q4:       q4,
+        quiz_score:    score,
+        quiz_category: category
+      }, getAttribution());
+
+      postToGHL(btn, payload, function() {
+        trackFB('Lead', { content_name: 'Metabolic Quiz', value: score });
+        trackTT('SubmitForm', { content_name: 'Metabolic Quiz' });
+        document.getElementById('quiz-wrapper').style.display = 'none';
+        document.getElementById('quiz-result').style.display = 'block';
+      });
     }
 
     // ── Register submit ────────────────────────────────────────
     function submitRegister(e) {
       e.preventDefault();
-      trackFB('CompleteRegistration', { content_name: 'April 29 Event', content_category: 'Event' });
-      trackTT('CompleteRegistration', { content_name: 'April 29 Event' });
-      document.getElementById('register-wrapper').style.display = 'none';
-      document.getElementById('register-result').style.display = 'block';
-      document.getElementById('register-result').scrollIntoView({ behavior: 'smooth' });
+      var form = e.target;
+      var btn  = form.querySelector('button[type=submit]');
+      var fd   = new FormData(form);
+
+      var payload = Object.assign({
+        lead_type:       'registration',
+        first_name:      fd.get('fn'),
+        last_name:       fd.get('ln'),
+        email:           fd.get('em'),
+        phone:           fd.get('ph'),
+        how_heard:       fd.get('source') || '',
+        seats_requested: fd.get('seats')  || '1',
+        event_name:      'Metabolic Reset — Dr. Kenny',
+        event_date:      '2026-04-29',
+        event_location:  'Holiday Inn Express, 7701 Washington Village Dr, Dayton, OH 45459'
+      }, getAttribution());
+
+      postToGHL(btn, payload, function() {
+        trackFB('CompleteRegistration', { content_name: 'April 29 Event', content_category: 'Event' });
+        trackTT('CompleteRegistration', { content_name: 'April 29 Event' });
+        document.getElementById('register-wrapper').style.display = 'none';
+        document.getElementById('register-result').style.display = 'block';
+        document.getElementById('register-result').scrollIntoView({ behavior: 'smooth' });
+      });
     }
 
     // ── Scroll depth tracking ──────────────────────────────────

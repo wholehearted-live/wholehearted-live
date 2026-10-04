@@ -1,0 +1,92 @@
+---
+// Standalone funnel layout for /protocol — logo only, no site navigation,
+// full-width sections (no max-width wrapper on <main>).
+import "../styles/global.css";
+
+const {
+  title = "The WholeHearted Metabolic Reset Protocol",
+  description = "A simple 2-step morning + mealtime routine to steady blood sugar, quiet cravings, and support healthy weight — with faith-centered coaching and community.",
+  index = false,
+  image = "/logo-wholehearted-living.png",
+  canonical = Astro.url.href,
+} = Astro.props;
+
+const siteUrl = "https://wholehearted.live";
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="robots" content={index ? "index, follow" : "noindex, nofollow"} />
+  <link rel="canonical" href={canonical} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WholeHearted" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={`${siteUrl}${image}`} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteUrl}${image}`} />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>{title}</title>
+
+  <!-- GoHighLevel tracking -->
+  <script
+    src="https://link.msgsndr.com/js/external-tracking.js"
+    data-tracking-id="tk_252c40d4690b453f9f9795810f909b8f"
+  ></script>
+</head>
+
+<body class="min-h-screen text-ink" style="background: var(--color-blush);">
+  <header class="bg-blush">
+    <div class="mx-auto flex max-w-5xl items-center justify-center px-4 pt-6 pb-4">
+      <a href="/" aria-label="WholeHearted home">
+        <img src="/logo-wholehearted-living.png" alt="WholeHearted Living" class="h-36 sm:h-52 object-contain" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-4xl px-4 py-12 text-center text-xs leading-relaxed">
+      <p class="brand-font text-base text-white">WholeHearted</p>
+      <p class="mt-1">Living well — body, mind, and spirit.</p>
+      <p class="mt-4">
+        <a class="hover:text-white" href="mailto:hello@wholehearted.live">hello@wholehearted.live</a>
+        · <a class="hover:text-white" href="tel:5136506639">(513) 650-6639</a>
+        · 1671 Big Bear Dr., Centerville, OH 45458
+      </p>
+      <p class="mt-6 max-w-2xl mx-auto text-white/50">
+        These statements have not been evaluated by the Food and Drug Administration. These products are not
+        intended to diagnose, treat, cure, or prevent any disease. Individual results vary. WholeHearted provides
+        wellness education and encouragement and is not a substitute for medical advice — talk with your healthcare
+        provider before starting any supplement, especially if you take medication for blood sugar or blood pressure.
+        Orders are placed and fulfilled by Unicity; WholeHearted is an independent Unicity distributor.
+      </p>
+      <p class="mt-6 text-white/40">© {new Date().getFullYear()} WholeHearted. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GoHighLevel Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69dc1df59f3b6f8188df315e" is:inline></script>
+</body>
+</html>

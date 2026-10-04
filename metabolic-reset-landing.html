@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FREE Event | Dr. Kenny | Transform Your Health | Dayton, OH – April 29</title>
+  <meta name="description" content="Join Dr. Kenny on April 29th at 6pm in Dayton, OH. Discover how a simple nutraceutical can help with Diabetes, High Blood Pressure, Cholesterol, PCOS, Weight, Brain Fog & more." />
+
+  <!-- Open Graph tags for Facebook & Instagram -->
+  <meta property="og:title" content="FREE Event: How a Simple Nutraceutical Can Transform Your Health" />
+  <meta property="og:description" content="Are you struggling with Diabetes, High BP, Cholesterol, PCOS, Weight, Fatigue or Brain Fog? Dr. Kenny reveals the solution. April 29 @ 6pm – Holiday Inn Express, Dayton OH. Limited seats!" />
+  <meta property="og:type" content="event" />
+  <meta property="og:url" content="" /><!-- Add your page URL here -->
+
+  <!-- ============================================================
+       FACEBOOK PIXEL
+       Replace YOUR_PIXEL_ID with your actual Facebook Pixel ID
+       ============================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); // ← Replace with your Facebook Pixel ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel -->
+
+  <!-- TikTok Pixel -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      ttq.load('YOUR_TIKTOK_PIXEL_ID'); // ← Replace with your TikTok Pixel ID
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --orange: #FF6B1A;
+      --orange-dark: #e05500;
+      --gold: #FFB800;
+      --teal: #00C9B1;
+      --dark: #0a0a0a;
+      --card: #111111;
+      --border: #2a2a2a;
+    }
+
+    .container { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
+    .text-center { text-align: center; }
+    .orange { color: var(--orange); }
+    .gold { color: var(--gold); }
+    .teal { color: var(--teal); }
+
+    /* ── STICKY HEADER ── */
+    header {
+      background: #000;
+      border-bottom: 3px solid var(--orange);
+      padding: 12px 0;
+      position: sticky; top: 0; z-index: 200;
+    }
+    header .inner {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    }
+    header .brand { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; }
+    header .brand span { color: var(--orange); }
+    .btn-header {
+      background: var(--orange); color: #fff; font-weight: 800; font-size: 0.88rem;
+      padding: 10px 20px; border-radius: 4px; border: none; cursor: pointer;
+      transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .btn-header:hover { background: var(--orange-dark); }
+
+    /* ── COUNTDOWN BANNER ── */
+    .top-banner {
+      background: linear-gradient(90deg, var(--orange-dark), var(--orange), #ff9a00);
+      color: #fff; text-align: center; padding: 13px 20px;
+      font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em;
+    }
+    #countdown-timer { font-size: 1.15rem; font-weight: 900; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #1a0800 0%, #0a0a0a 60%);
+      padding: 64px 0 52px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content:''; position:absolute; top:-100px; right:-100px;
+      width:600px; height:600px;
+      background: radial-gradient(circle, rgba(255,107,26,0.18) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .eyebrow {
+      display: inline-block; background: var(--orange); color: #fff;
+      font-size: 0.76rem; font-weight: 900; letter-spacing: 0.13em;
+      text-transform: uppercase; padding: 6px 16px; border-radius: 3px;
+      margin-bottom: 20px;
+    }
+    .eyebrow.gold-pill { background: var(--gold); color: #000; }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4.8vw, 3.4rem);
+      font-weight: 900; line-height: 1.08; margin-bottom: 18px;
+      max-width: 860px;
+    }
+    .hero h1 em { font-style: normal; color: var(--orange); }
+    .hero .subline {
+      font-size: 1.15rem; color: #ccc; max-width: 720px; margin-bottom: 28px;
+    }
+    .event-chips {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50px; padding: 8px 18px; font-size: 0.88rem; color: #ddd;
+    }
+    .chip .icon { font-size: 1rem; }
+    .btn-primary {
+      display: inline-block; background: var(--orange); color: #fff;
+      font-weight: 900; font-size: 1.1rem; padding: 18px 44px;
+      border-radius: 5px; border: none; cursor: pointer;
+      transition: transform 0.15s, background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 36px rgba(255,107,26,0.45);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 10px 44px rgba(255,107,26,0.55); }
+    .seats-note { margin-top: 14px; font-size: 0.88rem; color: #888; }
+    .seats-note span { color: var(--gold); font-weight: 700; }
+
+    /* ── CONDITIONS SECTION ── */
+    .conditions-section { padding: 68px 0; background: #0a0a0a; }
+    .section-label { font-size: 0.76rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .section-label.gold-label { color: var(--gold); }
+    .section h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .section p.lead { color: #bbb; font-size: 1.05rem; max-width: 720px; }
+
+    .condition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 13px; margin-top: 38px;
+    }
+    .condition-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 7px;
+      padding: 16px 18px;
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.95rem; font-weight: 600; color: #e8e8e8;
+    }
+    .condition-card .ci { font-size: 1.4rem; flex-shrink: 0; }
+
+    /* ── DOCTOR SECTION ── */
+    .doctor-section {
+      background: linear-gradient(180deg, #0d0a00 0%, #0a0a0a 100%);
+      padding: 68px 0;
+    }
+    .doctor-card {
+      display: grid; grid-template-columns: auto 1fr; gap: 48px;
+      align-items: start; max-width: 900px; margin: 0 auto;
+      background: var(--card); border: 1px solid var(--border);
+      border-top: 4px solid var(--gold); border-radius: 10px; padding: 44px;
+    }
+    @media (max-width: 680px) {
+      .doctor-card { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px; text-align: center; }
+      .doctor-photo { margin: 0 auto; }
+    }
+    .doctor-photo {
+      width: 180px; height: 180px; border-radius: 50%;
+      border: 4px solid var(--gold);
+      object-fit: cover; background: #222;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+    }
+    .doctor-name { font-size: 2rem; font-weight: 900; color: var(--gold); margin-bottom: 4px; }
+    .doctor-title { font-size: 0.88rem; font-weight: 700; color: var(--teal); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+    .doctor-desc { font-size: 0.97rem; color: #bbb; margin-bottom: 18px; }
+    .doctor-points { list-style: none; }
+    .doctor-points li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.94rem; color: #ccc;
+    }
+    .doctor-points li:last-child { border-bottom: none; }
+    .doctor-points li::before {
+      content: '✓'; background: var(--gold); color: #000;
+      font-weight: 900; border-radius: 50%; width: 20px; height: 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; flex-shrink: 0; margin-top: 2px;
+    }
+
+    /* ── WHAT YOU'LL LEARN ── */
+    .learn-section { padding: 68px 0; background: #050505; }
+    .learn-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px; margin-top: 38px;
+    }
+    .learn-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 28px 26px;
+    }
+    .learn-num { font-size: 2.2rem; font-weight: 900; color: var(--orange); margin-bottom: 10px; line-height: 1; }
+    .learn-card h3 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .learn-card p { font-size: 0.92rem; color: #999; }
+
+    /* ── RESULTS STRIP ── */
+    .results-strip {
+      background: linear-gradient(90deg, #1a0800, #001a0d, #1a0800);
+      border-top: 2px solid var(--orange); border-bottom: 2px solid var(--orange);
+      padding: 52px 0;
+    }
+    .results-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px; text-align: center;
+    }
+    .result-stat { }
+    .result-number { font-size: 2.6rem; font-weight: 900; color: var(--orange); }
+    .result-label { font-size: 0.85rem; color: #aaa; margin-top: 4px; }
+
+    /* ── QUIZ SECTION ── */
+    .quiz-section { padding: 68px 0; background: #0a0a0a; }
+    .quiz-box {
+      background: var(--card); border: 1px solid var(--border);
+      border-top: 4px solid var(--teal);
+      border-radius: 10px; padding: 44px;
+      max-width: 740px; margin: 0 auto;
+    }
+    @media (max-width: 580px) { .quiz-box { padding: 28px 18px; } }
+    .quiz-box h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
+    .quiz-intro { color: #aaa; margin-bottom: 28px; font-size: 0.97rem; }
+    .quiz-q { margin-bottom: 24px; }
+    .quiz-q p { font-weight: 700; margin-bottom: 10px; font-size: 0.97rem; }
+    .quiz-options { display: flex; flex-direction: column; gap: 9px; }
+    .quiz-opt {
+      display: flex; align-items: center; gap: 10px;
+      background: #191919; border: 1px solid var(--border);
+      border-radius: 6px; padding: 11px 15px; cursor: pointer;
+      font-size: 0.92rem; color: #ccc; transition: border-color 0.2s, background 0.2s;
+    }
+    .quiz-opt input[type="radio"] { accent-color: var(--teal); width: 17px; height: 17px; flex-shrink: 0; }
+    .quiz-opt:hover { border-color: var(--teal); background: #0d1a17; }
+
+    /* ── FORM STYLES ── */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label { font-size: 0.82rem; color: #999; font-weight: 700; letter-spacing: 0.04em; }
+    .field input, .field select {
+      background: #191919; border: 1px solid var(--border);
+      border-radius: 5px; padding: 12px 13px;
+      color: #fff; font-size: 0.93rem; outline: none;
+      transition: border-color 0.2s; font-family: inherit;
+    }
+    .field input:focus, .field select:focus { border-color: var(--orange); }
+    .field input::placeholder { color: #444; }
+    .btn-cta {
+      width: 100%; background: var(--orange); color: #fff;
+      font-size: 1.1rem; font-weight: 900; padding: 19px;
+      border: none; border-radius: 6px; cursor: pointer;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      box-shadow: 0 6px 34px rgba(255,107,26,0.42);
+      transition: background 0.2s, box-shadow 0.2s;
+      margin-top: 8px;
+    }
+    .btn-cta:hover { background: var(--orange-dark); box-shadow: 0 10px 44px rgba(255,107,26,0.52); }
+    .privacy-note { font-size: 0.76rem; color: #555; text-align: center; margin-top: 10px; }
+
+    /* ── MAIN REGISTRATION SECTION ── */
+    .register-section {
+      padding: 72px 0;
+      background: linear-gradient(180deg, #0d0500 0%, #0a0a0a 100%);
+    }
+    .reg-card {
+      background: #0d0d0d; border: 1px solid var(--border);
+      border-top: 5px solid var(--orange);
+      border-radius: 12px; padding: 50px;
+      max-width: 780px; margin: 0 auto;
+      box-shadow: 0 0 80px rgba(255,107,26,0.12);
+    }
+    @media (max-width: 580px) { .reg-card { padding: 28px 18px; } }
+    .reg-card .event-header { margin-bottom: 32px; }
+    .reg-card h2 { font-size: 1.9rem; font-weight: 900; margin-bottom: 6px; }
+    .reg-card .event-meta { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0 24px; }
+    .meta-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: #1a1a1a; border: 1px solid var(--border);
+      border-radius: 50px; padding: 9px 18px;
+      font-size: 0.9rem; color: #ddd; font-weight: 600;
+    }
+    .meta-chip .mi { font-size: 1.1rem; }
+    .meta-chip.highlight-chip { border-color: var(--orange); background: rgba(255,107,26,0.08); color: var(--orange); }
+
+    /* ── TESTIMONIALS ── */
+    .testi-section { padding: 68px 0; background: #050505; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; margin-top: 38px; }
+    .testi-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 26px;
+    }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 10px; }
+    .testi-quote { font-size: 0.93rem; color: #ccc; font-style: italic; margin-bottom: 14px; line-height: 1.65; }
+    .testi-author { font-weight: 800; font-size: 0.88rem; color: #fff; }
+    .testi-result { font-size: 0.78rem; color: var(--teal); margin-top: 3px; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 68px 0; background: #0a0a0a; }
+    .faq-list { max-width: 780px; margin: 36px auto 0; }
+    details {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 7px; margin-bottom: 10px; overflow: hidden;
+    }
+    summary {
+      cursor: pointer; padding: 17px 22px;
+      font-weight: 700; color: #fff; font-size: 0.96rem;
+      display: flex; justify-content: space-between; align-items: center;
+      list-style: none;
+    }
+    summary::after { content: '+'; color: var(--orange); font-size: 1.3rem; font-weight: 900; }
+    details[open] summary::after { content: '−'; }
+    details .faq-body { padding: 0 22px 16px; color: #bbb; font-size: 0.91rem; }
+
+    /* ── SOCIAL SHARE ── */
+    .social-strip {
+      background: #111; border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); padding: 22px 0;
+    }
+    .social-inner { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .social-inner p { font-size: 0.93rem; color: #aaa; }
+    .soc-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 5px; font-weight: 800;
+      font-size: 0.88rem; border: none; cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .soc-btn:hover { opacity: 0.85; }
+    .fb { background: #1877F2; color: #fff; }
+    .ig { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); color: #fff; }
+    .tt { background: #010101; color: #fff; border: 1px solid #333; }
+
+    /* ── MAP / LOCATION CARD ── */
+    .location-section { padding: 68px 0; background: #050505; }
+    .location-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+      max-width: 860px; margin: 36px auto 0;
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 640px) { .location-card { grid-template-columns: 1fr; } }
+    .location-map {
+      background: linear-gradient(135deg, #1a1200, #001a12);
+      min-height: 220px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 32px;
+      text-align: center;
+    }
+    .map-icon { font-size: 3rem; margin-bottom: 12px; }
+    .map-name { font-size: 1.1rem; font-weight: 900; color: var(--gold); }
+    .map-addr { font-size: 0.88rem; color: #bbb; margin-top: 6px; }
+    .map-link {
+      margin-top: 14px; display: inline-block; background: var(--orange);
+      color: #fff; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 20px; border-radius: 4px;
+    }
+    .location-info { padding: 32px; }
+    .location-info h3 { font-size: 1.2rem; font-weight: 900; color: #fff; margin-bottom: 16px; }
+    .info-row {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.93rem; color: #bbb;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .ii { font-size: 1.2rem; flex-shrink: 0; }
+    .info-row strong { color: #fff; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ── RESULT SCREENS ── */
+    .result-screen { display: none; text-align: center; padding: 16px 0; }
+    .result-screen h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 10px; }
+    .result-screen p { color: #bbb; }
+    .result-screen.success h3 { color: var(--teal); }
+    .result-screen.quiz-done h3 { color: var(--orange); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #000; border-top: 1px solid var(--border);
+      padding: 34px 0; text-align: center;
+      color: #555; font-size: 0.8rem;
+    }
+    footer a { color: #666; margin: 0 8px; }
+    footer a:hover { color: var(--orange); }
+    .disclaimer {
+      margin: 14px auto 0; max-width: 680px;
+      color: #3a3a3a; font-size: 0.76rem; line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container inner">
+    <div class="brand">Broad Legal Nurse <span>Consulting</span></div>
+    <button class="btn-header" onclick="scrollToReg()">Reserve My Seat → </button>
+  </div>
+</header>
+
+<!-- COUNTDOWN BANNER -->
+<div class="top-banner">
+  🔥 WEDNESDAY, APRIL 29TH @ 6PM &nbsp;|&nbsp; Holiday Inn Express · Dayton, OH &nbsp;|&nbsp;
+  <span id="countdown-timer">Limited Seats — Register Now!</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">FREE In-Person Event — April 29th · Dayton, OH</span>
+    <h1>Are You or Someone You Know<br>Struggling With Health Issues Like<br><em>Diabetes, High BP, or Weight Challenges?</em></h1>
+    <p class="subline">
+      Come and see <strong>Dr. Kenny</strong> present how a simple nutraceutical can empower you to
+      <strong>transform your health</strong> — without drugs, surgery, or extreme diets.
+    </p>
+    <div class="event-chips">
+      <div class="chip"><span class="icon">📅</span> Wednesday, April 29th</div>
+      <div class="chip"><span class="icon">🕕</span> 6:00 PM</div>
+      <div class="chip"><span class="icon">📍</span> Holiday Inn Express · Dayton, OH</div>
+      <div class="chip"><span class="icon">🎟️</span> FREE · Limited Seats</div>
+    </div>
+    <button class="btn-primary" onclick="scrollToReg()">Reserve My FREE Seat →</button>
+    <p class="seats-note">⚠️ <span>Seats are filling fast.</span> This is a limited-capacity in-person event.</p>
+  </div>
+</section>
+
+<!-- SOCIAL SHARE -->
+<div class="social-strip">
+  <div class="container social-inner">
+    <p>Know someone who needs this? Share it:</p>
+    <button class="soc-btn fb" onclick="shareFacebook()">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.5h-2.79V24C19.62 23.1 24 18.1 24 12.07"/></svg>
+      Share on Facebook
+    </button>
+    <button class="soc-btn ig" onclick="shareInstagram()">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Share on Instagram
+    </button>
+    <button class="soc-btn tt" onclick="shareTikTok()">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.77a4.85 4.85 0 01-1.02-.08z"/></svg>
+      Share on TikTok
+    </button>
+  </div>
+</div>
+
+<!-- CONDITIONS -->
+<section class="conditions-section section">
+  <div class="container">
+    <p class="section-label">You're In the Right Place If You're Dealing With…</p>
+    <h2 class="section h2">These <span class="orange">Common Health Conditions</span><br>May All Have the Same Root Cause</h2>
+    <p class="lead">Most people treat the symptoms. Dr. Kenny will show you how to address the underlying metabolic dysfunction driving all of these.</p>
+    <div class="condition-grid">
+      <div class="condition-card"><span class="ci">🩸</span> Diabetes</div>
+      <div class="condition-card"><span class="ci">💓</span> High Blood Pressure</div>
+      <div class="condition-card"><span class="ci">📊</span> High Cholesterol</div>
+      <div class="condition-card"><span class="ci">🔄</span> PCOS</div>
+      <div class="condition-card"><span class="ci">⚖️</span> Weight Challenges</div>
+      <div class="condition-card"><span class="ci">😴</span> Poor Sleep</div>
+      <div class="condition-card"><span class="ci">🫀</span> Fatty Liver</div>
+      <div class="condition-card"><span class="ci">👂</span> Tinnitus</div>
+      <div class="condition-card"><span class="ci">🏷️</span> Skin Tags</div>
+      <div class="condition-card"><span class="ci">🌿</span> Eczema</div>
+      <div class="condition-card"><span class="ci">🧠</span> Brain Fog</div>
+      <div class="condition-card"><span class="ci">⚡</span> Fatigue</div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:38px;">
+      <p class="section-label gold-label">Your Speaker</p>
+      <h2 class="section h2">Meet <span class="gold">Dr. Kenny</span></h2>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo">👨‍⚕️</div><!-- Replace with Dr. Kenny's actual photo -->
+      <div>
+        <div class="doctor-name">Dr. Kenny</div>
+        <div class="doctor-title">Metabolic Health Physician & Nutraceutical Expert</div>
+        <p class="doctor-desc">
+          Dr. Kenny has dedicated his career to uncovering the metabolic root causes behind today's most
+          common chronic conditions. His presentations consistently leave audiences with simple,
+          actionable strategies — backed by clinical science — that produce real, measurable results.
+        </p>
+        <ul class="doctor-points">
+          <li>Evidence-based approach to metabolic dysfunction</li>
+          <li>Expertise in nutraceuticals and the Unicity Feel Great System</li>
+          <li>Speaker at medical and wellness events nationwide</li>
+          <li>Real patient results across a wide range of chronic conditions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="learn-section section">
+  <div class="container text-center">
+    <p class="section-label">Inside the Event</p>
+    <h2>What Dr. Kenny Will Reveal</h2>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-num">01</div>
+        <h3>The Metabolic Root Cause</h3>
+        <p>Why conditions like diabetes, high BP, and fatty liver share the same metabolic origin — and why most doctors only treat the symptoms.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">02</div>
+        <h3>The Nutraceutical Breakthrough</h3>
+        <p>How a simple, clinically validated nutraceutical is helping people reverse years of metabolic damage — without prescriptions.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">03</div>
+        <h3>Real Patient Transformations</h3>
+        <p>Before-and-after results from real people who reversed high BP, lost weight, cleared brain fog, and reclaimed their energy.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">04</div>
+        <h3>The Simple 2-Product Protocol</h3>
+        <p>Exactly how the Unicity Feel Great system works, how to use it, and why the science behind it is unlike anything else available.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">05</div>
+        <h3>Your Personal Action Plan</h3>
+        <p>Leave the event knowing exactly what to do next — with a clear, realistic plan you can start that same week.</p>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">06</div>
+        <h3>Q&amp;A With Dr. Kenny</h3>
+        <p>Get your personal health questions answered directly by Dr. Kenny in a live, open Q&amp;A session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS STATS -->
+<section class="results-strip">
+  <div class="container">
+    <div class="results-grid">
+      <div class="result-stat">
+        <div class="result-number">12%</div>
+        <div class="result-label">Reduction in Glycemic Variability (Clinical Study)</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-number">↓ HbA1c</div>
+        <div class="result-label">Improved Blood Sugar Control in Trial Participants</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-number">↓ BMI</div>
+        <div class="result-label">Significant Reductions in Weight & Waist Circumference</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-number">↓ Triglycerides</div>
+        <div class="result-label">Improved Cholesterol & Lipid Panels</div>
+      </div>
+    </div>
+    <p style="color:#444; font-size:0.76rem; text-align:center; margin-top:22px;">* Based on published clinical validation studies on the Unicity Feel Great System. Individual results vary. Not medical advice.</p>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="quiz-box">
+      <div id="quiz-wrapper">
+        <span class="eyebrow" style="background:var(--teal); color:#000;">Free 60-Second Assessment</span>
+        <h2>Is Your Metabolism<br><span class="orange">Working Against You?</span></h2>
+        <p class="quiz-intro">Answer 4 quick questions and discover whether your body is showing signs of metabolic dysfunction — and whether this event is right for you.</p>
+        <form id="quizForm" onsubmit="submitQuiz(event)">
+          <div class="quiz-q">
+            <p>1. How would you describe your energy throughout the day?</p>
+            <div class="quiz-options">
+              <label class="quiz-opt"><input type="radio" name="q1" value="a" required> I crash after meals or in the afternoon</label>
+              <label class="quiz-opt"><input type="radio" name="q1" value="b"> I feel tired most of the time regardless</label>
+              <label class="quiz-opt"><input type="radio" name="q1" value="c"> My energy is generally stable</label>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p>2. Have you been told by a doctor you have any of the following?</p>
+            <div class="quiz-options">
+              <label class="quiz-opt"><input type="radio" name="q2" value="a" required> Pre-diabetes, insulin resistance, or Type 2 diabetes</label>
+              <label class="quiz-opt"><input type="radio" name="q2" value="b"> High BP, high cholesterol, or fatty liver</label>
+              <label class="quiz-opt"><input type="radio" name="q2" value="c"> None of the above</label>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p>3. How is your weight situation?</p>
+            <div class="quiz-options">
+              <label class="quiz-opt"><input type="radio" name="q3" value="a" required> Gaining weight without changing my diet</label>
+              <label class="quiz-opt"><input type="radio" name="q3" value="b"> Can't lose weight no matter what I try</label>
+              <label class="quiz-opt"><input type="radio" name="q3" value="c"> My weight has been stable and healthy</label>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p>4. Do you experience brain fog, poor sleep, or intense sugar cravings?</p>
+            <div class="quiz-options">
+              <label class="quiz-opt"><input type="radio" name="q4" value="a" required> Yes — all the time</label>
+              <label class="quiz-opt"><input type="radio" name="q4" value="b"> Sometimes — it comes and goes</label>
+              <label class="quiz-opt"><input type="radio" name="q4" value="c"> Rarely or never</label>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <p style="font-weight:700; margin-bottom:14px; color:#fff;">Enter your info to get your result:</p>
+            <div class="form-row">
+              <div class="field"><label>First Name *</label><input type="text" name="fn" placeholder="Jane" required /></div>
+              <div class="field"><label>Last Name *</label><input type="text" name="ln" placeholder="Smith" required /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Email *</label><input type="email" name="em" placeholder="jane@email.com" required /></div>
+              <div class="field"><label>Phone</label><input type="tel" name="ph" placeholder="(555) 000-0000" /></div>
+            </div>
+          </div>
+          <button type="submit" class="btn-cta">Get My Metabolic Assessment →</button>
+          <p class="privacy-note">🔒 100% private. No spam, ever.</p>
+        </form>
+      </div>
+      <div id="quiz-result" class="result-screen quiz-done">
+        <div style="font-size:3rem;margin-bottom:14px;">🔥</div>
+        <h3>Your Metabolism Needs Attention!</h3>
+        <p>Based on your answers, your body is showing signs of metabolic dysfunction. The great news: this is completely reversible — and Dr. Kenny will show you exactly how at this event.</p>
+        <button class="btn-primary" style="margin-top:18px;" onclick="scrollToReg()">Reserve My Free Seat at the Event →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section section">
+  <div class="container text-center">
+    <p class="section-label">Real People. Real Results.</p>
+    <h2>What Happens After the <span class="orange">Metabolic Reset</span></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"I reversed high blood pressure AND sleep apnea. My doctor cut my meds in half. I never believed it was possible until I attended this event."</p>
+        <div class="testi-author">Mike T.</div>
+        <div class="testi-result">Reversed High BP & Sleep Apnea</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"My A1C dropped from 6.4 to 5.6 in 90 days. My hands and skin cleared up. I feel 15 years younger. This nutraceutical system changed everything."</p>
+        <div class="testi-author">Sandra R.</div>
+        <div class="testi-result">Pre-Diabetes Reversed, Skin Cleared</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Lost 34 lbs, brain fog completely gone, and my cholesterol is now in the normal range. This is the most important health event I've ever attended."</p>
+        <div class="testi-author">Linda & Rob K.</div>
+        <div class="testi-result">34 lbs lost, Cholesterol normalized</div>
+      </div>
+    </div>
+    <p style="color:#444; font-size:0.76rem; margin-top:18px;">* Individual results may vary. Testimonials represent personal experiences.</p>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="register-section" id="register">
+  <div class="container">
+    <div class="reg-card">
+      <div class="event-header">
+        <span class="eyebrow">Reserve Your Free Seat</span>
+        <h2>Join Us on <span class="orange">April 29th</span></h2>
+        <p style="color:#bbb; font-size:1rem;">Space is strictly limited. Register below to hold your spot.</p>
+        <div class="event-meta">
+          <div class="meta-chip highlight-chip"><span class="mi">📅</span> Wednesday, April 29th</div>
+          <div class="meta-chip highlight-chip"><span class="mi">🕕</span> 6:00 PM</div>
+          <div class="meta-chip"><span class="mi">🏨</span> Holiday Inn Express</div>
+          <div class="meta-chip"><span class="mi">📍</span> 7701 Washington Village Dr · Dayton, OH 45459</div>
+          <div class="meta-chip"><span class="mi">💵</span> FREE — No Cost</div>
+        </div>
+      </div>
+
+      <form id="registerForm" onsubmit="submitRegister(event)">
+        <div class="form-row">
+          <div class="field"><label>First Name *</label><input type="text" name="fn" placeholder="Jane" required /></div>
+          <div class="field"><label>Last Name *</label><input type="text" name="ln" placeholder="Smith" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Email Address *</label><input type="email" name="em" placeholder="jane@email.com" required /></div>
+          <div class="field"><label>Phone Number *</label><input type="tel" name="ph" placeholder="(555) 000-0000" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>How did you hear about this event?</label>
+            <select name="source">
+              <option value="">Select one…</option>
+              <option value="facebook">Facebook Ad</option>
+              <option value="instagram">Instagram Ad</option>
+              <option value="tiktok">TikTok</option>
+              <option value="friend">Friend / Word of Mouth</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Number of Seats Needed</label>
+            <select name="seats">
+              <option value="1">1 Seat</option>
+              <option value="2">2 Seats</option>
+              <option value="3">3 Seats</option>
+              <option value="4">4 Seats</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-cta">✅ YES! Reserve My FREE Seat — April 29th →</button>
+        <p class="privacy-note">🔒 Your info is safe. We will only use it to confirm your reservation and send event reminders.</p>
+      </form>
+      <div id="register-result" class="result-screen success">
+        <div style="font-size:3rem;margin-bottom:14px;">🎉</div>
+        <h3>You're Registered!</h3>
+        <p>Check your email — your confirmation and directions are on the way. We'll see you on <strong>April 29th at 6pm</strong> at the Holiday Inn Express in Dayton!</p>
+        <p style="margin-top:12px; color:#777; font-size:0.88rem;">📍 7701 Washington Village Dr · Dayton, OH 45459</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section section">
+  <div class="container text-center">
+    <p class="section-label">Event Venue</p>
+    <h2>Where to Find Us</h2>
+    <div class="location-card">
+      <div class="location-map">
+        <div class="map-icon">📍</div>
+        <div class="map-name">Holiday Inn Express</div>
+        <div class="map-addr">7701 Washington Village Dr<br>Dayton, OH 45459</div>
+        <a class="map-link" href="https://maps.google.com/?q=7701+Washington+Village+Dr+Dayton+OH+45459" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+      <div class="location-info">
+        <h3>Event Details</h3>
+        <div class="info-row"><span class="ii">📅</span><div><strong>Date</strong>Wednesday, April 29th, 2025</div></div>
+        <div class="info-row"><span class="ii">🕕</span><div><strong>Time</strong>6:00 PM — Doors open at 5:45 PM</div></div>
+        <div class="info-row"><span class="ii">🏨</span><div><strong>Venue</strong>Holiday Inn Express<br>7701 Washington Village Dr · Dayton, OH 45459</div></div>
+        <div class="info-row"><span class="ii">🚗</span><div><strong>Parking</strong>Free parking available on site</div></div>
+        <div class="info-row"><span class="ii">💵</span><div><strong>Cost</strong>Completely FREE — register above to hold your seat</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section section">
+  <div class="container text-center">
+    <p class="section-label">Common Questions</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Is this event really free?</summary>
+        <div class="faq-body">Yes — 100% free to attend. No credit card, no catch. Just register to hold your seat as space is limited.</div>
+      </details>
+      <details>
+        <summary>What exactly is the nutraceutical Dr. Kenny will be presenting?</summary>
+        <div class="faq-body">Dr. Kenny will present the Unicity Feel Great System — a clinically studied combination of Unimate (concentrated yerba mate) and Balance (a patented fiber matrix) used alongside an intermittent fasting practice. It has published clinical studies showing improvements in blood sugar, cholesterol, triglycerides, and body composition.</div>
+      </details>
+      <details>
+        <summary>Do I need to have a serious health condition to attend?</summary>
+        <div class="faq-body">Absolutely not. This event is for anyone who wants to understand and improve their metabolic health — whether you have a diagnosed condition or just want more energy, better sleep, and a healthier weight.</div>
+      </details>
+      <details>
+        <summary>Can I bring a spouse, friend, or family member?</summary>
+        <div class="faq-body">Yes! In fact, we encourage it. Please select the number of seats you need when you register so we can accommodate your group.</div>
+      </details>
+      <details>
+        <summary>Will there be products available to purchase?</summary>
+        <div class="faq-body">Products may be available at the event for those who are interested after hearing the presentation. There is absolutely no obligation to purchase anything.</div>
+      </details>
+      <details>
+        <summary>What if I can't make it on April 29th?</summary>
+        <div class="faq-body">Register anyway and we'll keep you informed about future events and online options.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div><strong>Broad Legal Nurse Consulting</strong> &nbsp;|&nbsp; <a href="mailto:chris@broadlegalnurseconsulting.com">chris@broadlegalnurseconsulting.com</a></div>
+    <div style="margin-top:10px;">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Disclaimer</a>
+    </div>
+    <p class="disclaimer">
+      This event is for educational and informational purposes only. The information provided is not intended to diagnose, treat, cure, or prevent any disease or medical condition. Always consult with a qualified healthcare provider before making any changes to your health regimen. Individual results shown by attendees and participants may vary.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // ── Helpers ────────────────────────────────────────────────
+  function scrollToReg() {
+    document.getElementById('register').scrollIntoView({behavior:'smooth'});
+  }
+  function trackFB(event, params) {
+    if (typeof fbq !== 'undefined') fbq('track', event, params || {});
+  }
+  function trackTT(event, params) {
+    if (typeof ttq !== 'undefined') ttq.track(event, params || {});
+  }
+
+  // ── Countdown to April 29, 2025 6pm ET ─────────────────────
+  function updateCountdown() {
+    var target = new Date('2025-04-29T18:00:00-04:00').getTime();
+    var now = new Date().getTime();
+    var diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown-timer').textContent = 'Event is TONIGHT at 6pm!';
+      return;
+    }
+    var days = Math.floor(diff / (1000*60*60*24));
+    var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var secs = Math.floor((diff % (1000*60)) / 1000);
+    document.getElementById('countdown-timer').textContent =
+      days + 'd ' + hours + 'h ' + mins + 'm ' + secs + 's until event';
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ── Quiz Submit ─────────────────────────────────────────────
+  function submitQuiz(e) {
+    e.preventDefault();
+    trackFB('Lead', { content_name: 'Metabolic Quiz' });
+    trackTT('SubmitForm', { content_name: 'Metabolic Quiz' });
+    document.getElementById('quiz-wrapper').style.display = 'none';
+    document.getElementById('quiz-result').style.display = 'block';
+  }
+
+  // ── Registration Submit ─────────────────────────────────────
+  function submitRegister(e) {
+    e.preventDefault();
+    trackFB('CompleteRegistration', { content_name: 'April 29 Event Registration', content_category: 'Event' });
+    trackTT('CompleteRegistration', { content_name: 'April 29 Event Registration' });
+    document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('register-result').style.display = 'block';
+    document.getElementById('register-result').scrollIntoView({behavior:'smooth'});
+  }
+
+  // ── CTA click tracking ──────────────────────────────────────
+  document.querySelectorAll('.btn-primary, .btn-cta, .btn-header').forEach(function(b) {
+    b.addEventListener('click', function() {
+      trackFB('InitiateCheckout', { content_name: 'CTA Button' });
+      trackTT('ClickButton');
+    });
+  });
+
+  // ── Scroll depth tracking ───────────────────────────────────
+  var tracked50 = false, trackedReg = false;
+  window.addEventListener('scroll', function() {
+    var scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    if (!tracked50 && scrollPct >= 50) {
+      trackFB('ViewContent', { content_name: '50% Page Scroll' });
+      trackTT('ViewContent');
+      tracked50 = true;
+    }
+    var reg = document.getElementById('register');
+    if (!trackedReg && reg) {
+      var rect = reg.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        trackFB('ViewContent', { content_name: 'Viewed Registration Section' });
+        trackedReg = true;
+      }
+    }
+  });
+
+  // ── Social Share ────────────────────────────────────────────
+  function shareFacebook() {
+    var url = encodeURIComponent(window.location.href);
+    var text = encodeURIComponent('FREE Health Event with Dr. Kenny – April 29 in Dayton, OH! Learn how a simple nutraceutical can help with Diabetes, High BP, Cholesterol, Weight & more.');
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url + '&quote=' + text, '_blank', 'width=620,height=420');
+    trackFB('Share');
+  }
+  function shareInstagram() {
+    alert('To share on Instagram:\n\nCopy this page link and paste it in your bio link, story, or DM!\n\n' + window.location.href);
+  }
+  function shareTikTok() {
+    alert('To share on TikTok:\n\nCopy this link and share it in your TikTok bio or video caption!\n\n' + window.location.href);
+  }
+</script>
+
+</body>
+</html>

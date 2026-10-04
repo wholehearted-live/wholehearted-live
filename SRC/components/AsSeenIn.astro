@@ -1,0 +1,63 @@
+---
+// "AS SEEN IN" streaming logo banner (infinite marquee; pauses on hover).
+// Claims verified by Chris Broad, Oct 2026. Logo files live in /public/press/ (transparent PNGs).
+// Scrolls once there are 3+ entries; shows a static centered row with fewer.
+const outlets: { name: string; detail?: string; src?: string }[] = [
+  { name: "The University of Sydney", src: "/press/sydney.png" },
+  { name: "FDA-registered facility · Good Manufacturing Practice", src: "/press/fda-gmp.png" },
+  { name: "PDR — Physicians' Desk Reference", src: "/press/pdr.png" },
+  { name: "Cleveland Clinic", src: "/press/cleveland-clinic.png" },
+  { name: "Health Canada", src: "/press/health-canada.png" },
+  { name: "NSF Certification", src: "/press/nsf.png" },
+];
+const { tone = "light" } = Astro.props;
+const scrolling = outlets.length >= 3;
+---
+
+{outlets.length > 0 && (
+  <section class:list={["py-8 overflow-hidden", tone === "light" ? "bg-white" : "bg-blush"]} aria-label="As seen in">
+    <p class="text-center text-xs font-semibold uppercase tracking-[0.3em] text-ink/50 mb-5">As Seen In</p>
+    {scrolling ? (
+      <div class="marquee relative">
+        <div class="marquee-track flex w-max items-center gap-20">
+          {[0, 1].map((dup) => (
+            <ul class="flex items-center gap-20 shrink-0" aria-hidden={dup === 1 ? "true" : undefined}>
+              {outlets.map((o) => (
+                <li class="shrink-0">
+                  {o.src ? (
+                    <img src={o.src} alt={o.name} loading="lazy" class="h-12 sm:h-14 w-auto max-w-[200px] sm:max-w-[240px] object-contain" />
+                  ) : (
+                    <span class="brand-font text-2xl text-ink/45 whitespace-nowrap">{o.name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <ul class="flex flex-wrap items-center justify-center gap-x-14 gap-y-4 px-4">
+        {outlets.map((o) => (
+          <li class="text-center">
+            {o.src ? (
+              <img src={o.src} alt={o.name} class="h-12 w-auto object-contain mx-auto" />
+            ) : (
+              <span class="brand-font text-4xl font-bold text-ink/70">{o.name}</span>
+            )}
+            {o.detail && <p class="mt-1 text-sm text-ink/55">{o.detail}</p>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+)}
+
+<style>
+  .marquee { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+  .marquee-track { animation: marquee 32s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 2.5rem)); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
+  }
+</style>

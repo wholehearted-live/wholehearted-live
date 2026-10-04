@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GHL Webhook — Mapping Reference Sender</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 30px;
+      color: #0f172a;
+      line-height: 1.55;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    p { color: #475569; }
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    button {
+      padding: 16px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #f43f5e;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.15s;
+    }
+    button:hover:not(:disabled) { background: #e11d48; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    #status {
+      margin-top: 24px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      display: none;
+      white-space: pre-line;
+    }
+    .success { display: block !important; background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .error   { display: block !important; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    ol { color: #334155; }
+    ol li { margin: 8px 0; }
+    .box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Send a Mapping Reference to GHL</h1>
+  <p>
+    Click the button below once. It will POST a sample payload
+    (with every field both of your landing-page forms can send)
+    to your GoHighLevel Inbound Webhook.
+    GHL will capture it as a <strong>Mapping Reference</strong>
+    template you can select in the workflow trigger.
+  </p>
+
+  <button id="sendBtn" onclick="sendPayload()">Send Test Payload to GHL →</button>
+  <div id="status"></div>
+
+  <div class="box">
+    <strong>After you click:</strong>
+    <ol>
+      <li>Go back to the GHL workflow tab.</li>
+      <li>In the <strong>Mapping Reference</strong> dropdown, click <strong>"Check for new requests"</strong>.</li>
+      <li>A new entry should appear &mdash; select it.</li>
+      <li>Click <strong>Save Trigger</strong>, then toggle the workflow to <strong>Published</strong>.</li>
+    </ol>
+  </div>
+
+  <script>
+    async function sendPayload() {
+      const btn = document.getElementById('sendBtn');
+      const status = document.getElementById('status');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      status.className = '';
+      status.textContent = '';
+
+      const payload = {
+        lead_type:       "registration",
+        first_name:      "Mapping",
+        last_name:       "Reference",
+        email:           "mapping-reference@wholehearted.live",
+        phone:           "(555) 123-4567",
+        how_heard:       "facebook",
+        seats_requested: "2",
+        event_name:      "Metabolic Reset — Dr. Kenny",
+        event_date:      "2026-04-29",
+        event_location:  "Holiday Inn Express, 7701 Washington Village Dr, Dayton, OH 45459",
+        quiz_q1:         "a",
+        quiz_q2:         "b",
+        quiz_q3:         "a",
+        quiz_q4:         "a",
+        quiz_score:      11,
+        quiz_category:   "high",
+        utm_source:      "facebook",
+        utm_medium:      "cpc",
+        utm_campaign:    "april29-event",
+        utm_term:        "metabolic-reset",
+        utm_content:     "ad-variant-a",
+        fbclid:          "IwAR0SampleFacebookClickId",
+        ttclid:          "SampleTikTokClickId",
+        gclid:           "SampleGoogleClickId",
+        referrer:        "https://www.facebook.com/",
+        landing_url:     "https://wholehearted.live/event?utm_source=facebook&utm_medium=cpc&utm_campaign=april29-event",
+        landing_path:    "/event",
+        submitted_at:    new Date().toISOString(),
+        user_agent:      navigator.userAgent
+      };
+
+      try {
+        // Use text/plain to avoid the CORS preflight that fails on file:// origins.
+        // GHL's webhook parses the JSON body regardless of content-type.
+        await fetch(
+          'https://services.leadconnectorhq.com/hooks/7N69JUsYpwGuiYRdR7Me/webhook-trigger/dd030c5c-556a-4a0c-839a-911f79f58b0a',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+            body: JSON.stringify(payload),
+            mode: 'no-cors'
+          }
+        );
+        status.className = 'success';
+        status.innerHTML =
+          '<strong>✓ Sent.</strong><br>' +
+          'Switch to the GHL tab and click <strong>"Check for new requests"</strong> in the Mapping Reference dropdown. ' +
+          'A new entry should appear within a few seconds — select it, then Save Trigger.';
+      } catch (err) {
+        status.className = 'error';
+        status.textContent = 'Error: ' + err.message + '\nTry again, or refresh this page.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Another Test Payload';
+      }
+    }
+  </script>
+</body>
+</html>

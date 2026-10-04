@@ -1,0 +1,28 @@
+---
+// Big pill CTA used throughout the /protocol funnel page.
+// variant "light" = white pill (for clay/dark backgrounds), "clay" = clay pill (for light backgrounds)
+import { LINKS } from "../data/links";
+
+const { variant = "clay", label = "Yes! I Want the Protocol", note = "" } = Astro.props;
+const styles =
+  variant === "light"
+    ? "bg-white text-clay hover:bg-blush"
+    : "bg-clay text-white hover:bg-wine";
+---
+
+<div class="mt-10 text-center">
+  <a
+    href={LINKS.unicity.tryIt}
+    target="_blank"
+    rel="noopener noreferrer"
+    class:list={[
+      "inline-flex w-full max-w-md items-center justify-center rounded-full px-8 py-5 text-base sm:text-lg font-semibold uppercase tracking-wide shadow-lg shadow-ink/10 ring-1 ring-black/5 transition hover:-translate-y-0.5",
+      styles,
+    ]}
+  >
+    {label}
+  </a>
+  {note && (
+    <p class:list={["mt-3 text-xs", variant === "light" ? "text-white/80" : "text-ink/55"]}>{note}</p>
+  )}
+</div>

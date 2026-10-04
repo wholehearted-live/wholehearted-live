@@ -3,52 +3,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="About WholeHearted — Meet Chris & Molly Broad | Centerville, OH"
-  description="Chris and Molly Broad are the family behind WholeHearted — a faith-centered wellness community in Centerville, OH helping people overcome chronic illness and live with renewed energy and purpose."
+  title="About WholeHearted — Meet Molly Broad (@metabolicmolly) | Centerville, OH"
+  description="Molly Broad (@metabolicmolly) is the founder of WholeHearted — a faith-centered wellness community in Centerville, OH helping people reclaim their metabolic health and live with renewed energy and purpose."
 >
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden py-20 -mx-4 px-4">
     <div class="absolute inset-0 -z-10 bg-gradient-to-r from-rose/15 via-ivory via-50% to-sage/10"></div>
     <div class="text-center max-w-3xl mx-auto">
-      <p class="text-sm font-medium text-wine uppercase tracking-wide mb-4">Our Story</p>
+      <p class="text-sm font-medium text-wine uppercase tracking-wide mb-4">Founder of WholeHearted</p>
       <h1 class="brand-font text-4xl md:text-5xl font-medium tracking-tight text-ink">
-        Meet the Broads
+        Meet Molly
       </h1>
+      <p class="mt-2 text-wine font-medium tracking-wide">@metabolicmolly</p>
       <span class="mx-auto mt-4 block h-1.5 w-24 rounded-full bg-wine"></span>
       <p class="mt-6 max-w-xl text-base text-ink/70 mx-auto">
-        A nutritionist, a pastoral counselor, a nurse, and a veteran — and most importantly, a wife and husband
-        who believe you were made to feel whole.
+        A certified health coach, functional-nutrition-trained wellness educator, pastoral counselor, and a woman
+        of faith who believes you were made to feel whole.
       </p>
     </div>
   </section>
 
-  <!-- Chris & Molly Together -->
-  <section class="py-16 max-w-4xl mx-auto">
-    <div class="rounded-2xl border border-ink/10 bg-white/70 p-8 md:p-12">
-      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-4">Why We Started WholeHearted</p>
-      <p class="text-ink/75 leading-relaxed mb-5 text-lg">
-        WholeHearted didn't start as a business idea — it started as a conviction.
-      </p>
-      <p class="text-ink/70 leading-relaxed mb-5">
-        Between us, we've spent decades in emergency medicine, military service, functional nutrition, and pastoral
-        care. We've sat with people in their hardest moments — in the ER, in counseling rooms, in prayer. And
-        over and over, we saw the same pattern: people suffering from conditions that were largely preventable,
-        feeling unsupported, and not knowing where to turn.
-      </p>
-      <p class="text-ink/70 leading-relaxed mb-5">
-        When we discovered the Feel Great System through Unicity, we didn't see a product — we saw a tool that
-        aligned with everything we already believed about how the body was designed to work. We tried it ourselves.
-        We saw real results. And we knew we had to share it.
-      </p>
-      <p class="text-ink/70 leading-relaxed">
-        But more than sharing a product, we wanted to build something with a soul — a community where faith,
-        science, and genuine care come together. That's WholeHearted. And we're glad you're here.
-      </p>
-    </div>
-  </section>
-
-  <!-- Meet Molly -->
+  <!-- Molly's Bio -->
   <section class="py-8 max-w-4xl mx-auto">
     <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
 
@@ -63,18 +39,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <!-- Bio -->
       <div class="py-4">
-        <p class="text-sage font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
+        <p class="text-sage font-semibold tracking-widest text-sm uppercase mb-2">Founder</p>
         <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Molly Broad</h2>
-        <p class="text-ink/50 text-sm mb-6">Functional Nutrition · Pastoral Counselor · BS Family & Child Studies</p>
+        <p class="text-ink/50 text-sm mb-6">Certified Health Coach · Functional Nutrition · Pastoral Counselor · BS Family & Child Studies</p>
 
         <p class="text-ink/70 leading-relaxed mb-4">
-          Molly brings a rare combination of gifts to WholeHearted — the mind of a trained nutritionist, the
+          Molly brings a rare combination of gifts to WholeHearted — the mind of a nutrition educator, the
           heart of a pastoral counselor, and the grounding of a family systems scholar.
         </p>
         <p class="text-ink/70 leading-relaxed mb-4">
           Her training in functional nutrition means she understands not just what people should eat, but
           why their bodies respond the way they do — and how to support real, sustainable change from the inside out.
-          She speaks the same scientific language as the Feel Great System.
         </p>
         <p class="text-ink/70 leading-relaxed mb-4">
           As a volunteer pastoral counselor at her church, Molly has walked alongside countless people through
@@ -87,7 +62,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
 
         <div class="flex flex-wrap gap-2">
-          {["Functional Nutrition", "Pastoral Counselor", "Family & Child Studies", "Community Builder"].map((tag) => (
+          {["Certified Health Coach", "Functional Nutrition", "Pastoral Counselor", "Family & Child Studies"].map((tag) => (
             <span class="rounded-full bg-sage/15 text-sage text-xs font-medium px-3 py-1">{tag}</span>
           ))}
         </div>
@@ -95,78 +70,74 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Divider -->
-  <div class="mx-auto my-4 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/20 to-transparent"></div>
+  <!-- Brand ribbon divider -->
+  <div class="mx-auto my-12 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
 
-  <!-- Meet Chris -->
-  <section class="py-8 max-w-4xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-
-      <!-- Bio (left on desktop for Chris) -->
-      <div class="py-4 md:order-1">
-        <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-2">Co-Founder</p>
-        <h2 class="text-3xl font-semibold text-ink tracking-tight mb-1">Chris Broad</h2>
-        <p class="text-ink/50 text-sm mb-6">Emergency Room RN · Retired U.S. Army Veteran</p>
-
-        <p class="text-ink/70 leading-relaxed mb-4">
-          Chris has spent his career on the front lines of human health. As an Emergency Room Registered Nurse,
-          he's seen firsthand what happens when the body breaks down — and how often those crises could have
-          been prevented with the right support, education, and tools.
-        </p>
-        <p class="text-ink/70 leading-relaxed mb-4">
-          His years of service in the U.S. Army instilled in him a deep commitment to discipline, integrity,
-          and showing up for others — values that run through everything WholeHearted does. He doesn't recommend
-          anything he hasn't personally vetted, and he brings a clinician's eye to every conversation about health.
-        </p>
-        <p class="text-ink/70 leading-relaxed mb-6">
-          Chris believes the best healthcare is preventive care — and that a faith-centered community is one
-          of the most powerful tools for lasting wellness.
-        </p>
-
-        <div class="flex flex-wrap gap-2">
-          {["Emergency Room RN", "U.S. Army Veteran", "Metabolic Health Advocate", "Faith & Wellness"].map((tag) => (
-            <span class="rounded-full bg-rose/10 text-rose text-xs font-medium px-3 py-1">{tag}</span>
-          ))}
-        </div>
+  <!-- Molly's Story (her own words) -->
+  <section class="py-8 max-w-3xl mx-auto">
+    <div class="rounded-2xl border border-ink/10 bg-white/70 p-8 md:p-14">
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">My Story</p>
+      <h2 class="brand-font text-3xl md:text-4xl text-ink mb-8">Hi, I'm Molly</h2>
+      <p class="text-ink/75 leading-relaxed mb-5">Health has been part of my story for as long as I can remember.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">As a little girl, I was always interested in nutrition, fitness, and taking care of my body. That interest continued throughout my life and eventually led me to pursue multiple certifications in health coaching. I have always believed that the choices we make every day matter, and I have spent years learning more about nutrition, wellness, and how the body works.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">But my passion for health is also deeply personal.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Growing up, I watched my mom, Mary, struggle with her weight and with her health. As the years went on, those struggles became increasingly complicated. Near the end of her life, she was taking 42 different medications to manage multiple health conditions, including Parkinson’s disease, Lewy body dementia, hypertension, and other chronic health problems.</p>
+      <p class="brand-font text-xl md:text-2xl text-wine italic leading-snug my-8">Watching someone you love go through that changes you.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">My mom passed away five years ago, but her experience has stayed with me. It made me think deeply about the way we approach health, the choices we make years before a diagnosis, and how often we wait until something has become a serious problem before we begin looking for answers.</p>
+      <p class="brand-font text-xl md:text-2xl text-wine italic leading-snug my-8">I never wanted health to be something I only thought about when something went wrong.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Even with my lifelong focus on nutrition and fitness, though, I eventually found myself struggling too.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">My weight would go up and down. My energy was getting worse as I got older. I dealt with cravings, brain fog, poor sleep, bloating, and that frustrating feeling of wondering why my body seemed to be changing despite my efforts to take care of myself.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">I was doing many of the things I had always believed were important, but something still felt like it was missing.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">A close friend eventually introduced me to the Feel Great System, a simple approach that helped me begin looking at metabolic health in a completely different way.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Instead of focusing only on calories, exercise, or the number on the scale, I began learning more about insulin resistance, blood sugar, cravings, energy, sleep, and how interconnected our metabolism really is.</p>
+      <p class="brand-font text-xl md:text-2xl text-wine italic leading-snug my-8">That changed so much for me.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Over the following months, I lost 11 pounds, the puffiness in my face decreased, my bloating and constipation improved, my energy came back, I started sleeping through the night, and the constant cravings that had controlled so many of my choices began to quiet down.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">But the biggest change was not simply losing weight.</p>
+      <p class="brand-font text-xl md:text-2xl text-wine italic leading-snug my-8">For the first time, I felt like I was beginning to understand my body instead of constantly fighting it.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Looking back, I realize that my journey into metabolic health brought together so many pieces of my life: the little girl who was fascinated by nutrition and fitness, the health coach who wanted to understand how to help people make healthier choices, the daughter who watched her mother struggle with chronic illness, and the woman who eventually realized that she still had more to learn about her own health.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">That is why this has become so important to me.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Today, my family and I continue to focus on supporting our own metabolic health, and I share what I have learned with others who may be struggling with stubborn weight, cravings, low energy, blood sugar concerns, fatty liver, brain fog, or simply feeling like their body is no longer responding the way it used to.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">I am not here to tell anyone they need to be perfect.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">I am not here to replace their doctor or tell them how to manage a medical condition.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">I am here to help people become more curious about their health, understand their bodies better, and discover simple, sustainable ways to support their metabolic health.</p>
+      <p class="text-ink/75 leading-relaxed mb-5">Because after watching my mom’s journey and going through my own, I believe there is tremendous value in becoming proactive about our health long before we are forced to be.</p>
+      <div class="my-8 space-y-1 border-l-4 border-rose/40 pl-5">
+        <p class="brand-font text-lg md:text-xl text-ink">We deserve education.</p>
+        <p class="brand-font text-lg md:text-xl text-ink">We deserve to understand our bodies.</p>
+        <p class="brand-font text-lg md:text-xl text-ink">We deserve hope.</p>
+        <p class="brand-font text-lg md:text-xl text-ink">And we deserve to feel empowered to make informed decisions for ourselves and the people we love.</p>
       </div>
-
-      <!-- Photo placeholder -->
-      <div class="rounded-2xl overflow-hidden bg-ink/5 border border-ink/10 aspect-[4/5] flex flex-col items-center justify-center text-center p-8 md:order-2">
-        <!-- Replace this div with an <img> tag when you have a photo:
-             <img src="/team/chris.jpg" alt="Chris Broad" class="w-full h-full object-cover object-top" />
-        -->
-        <div class="w-20 h-20 rounded-full bg-rose/20 flex items-center justify-center text-rose text-3xl mb-4">C</div>
-        <p class="text-ink/40 text-sm">Photo coming soon</p>
-      </div>
-
+      <p class="text-ink/75 leading-relaxed mb-5">That is why I do what I do.</p>
+      <p class="mt-8 text-ink/60">Wholeheartedly,</p>
+      <p class="brand-font text-3xl text-wine mt-1">Molly</p>
     </div>
   </section>
 
   <!-- Brand ribbon divider -->
   <div class="mx-auto my-12 h-px max-w-3xl bg-gradient-to-r from-transparent via-wine/30 to-transparent"></div>
 
-  <!-- Together — the WholeHearted difference -->
+  <!-- Molly's approach -->
   <section class="py-8 max-w-4xl mx-auto">
     <div class="text-center mb-10">
-      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Why It Matters</p>
+      <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Molly's Approach</p>
       <h2 class="text-3xl font-semibold text-ink tracking-tight">Body. Mind. Spirit.</h2>
-      <p class="mt-4 text-ink/60 max-w-2xl mx-auto">Together, Chris and Molly bring credentials and calling that cover the whole person.</p>
+      <p class="mt-4 text-ink/60 max-w-2xl mx-auto">Wellness that cares for the whole person — not just the number on the scale.</p>
     </div>
     <div class="grid sm:grid-cols-3 gap-6 text-center">
       <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
-        <div class="w-12 h-12 rounded-full bg-rose/15 flex items-center justify-center text-rose text-xl mx-auto mb-4">🩺</div>
+        <div class="w-12 h-12 rounded-full bg-rose/15 flex items-center justify-center text-rose text-xl mx-auto mb-4">🥗</div>
         <h3 class="font-semibold text-ink mb-2">Body</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Chris's clinical background as an ER nurse and his functional knowledge of metabolic health means real, medically grounded guidance.</p>
+        <p class="text-sm text-ink/65 leading-relaxed">Functional nutrition and metabolic health education that helps you understand why your body responds the way it does.</p>
       </div>
       <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
         <div class="w-12 h-12 rounded-full bg-sage/15 flex items-center justify-center text-sage text-xl mx-auto mb-4">🌿</div>
         <h3 class="font-semibold text-ink mb-2">Mind</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Molly's functional nutrition training and family systems education means she addresses the whole lifestyle — not just what's on your plate.</p>
+        <p class="text-sm text-ink/65 leading-relaxed">Practical habits for real family life — not just what's on your plate, but how you live, rest, and connect.</p>
       </div>
       <div class="rounded-2xl border border-ink/10 bg-white/60 p-6">
         <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-gold text-xl mx-auto mb-4">🙏</div>
         <h3 class="font-semibold text-ink mb-2">Spirit</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Molly's pastoral counseling and their shared faith keeps this community rooted in what matters most — purpose, grace, and belonging.</p>
+        <p class="text-sm text-ink/65 leading-relaxed">Pastoral care and shared faith keep this community rooted in what matters most — purpose, grace, and belonging.</p>
       </div>
     </div>
   </section>
@@ -229,24 +200,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="py-8 mb-8">
     <div class="rounded-3xl bg-sage/20 py-20 px-8 text-center">
       <h2 class="brand-font text-2xl md:text-3xl font-medium text-ink mb-4">
-        Ready to join the journey?
+        Ready to start your reset with Molly?
       </h2>
       <p class="text-ink/70 max-w-xl mx-auto mb-8">
         Whether you're curious about wellness, looking for community, or ready to dive in —
-        we'd love to have you. Come as you are.
+        Molly would love to walk with you. Come as you are.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="/live"
+          href="/protocol"
           class="inline-flex items-center justify-center rounded-xl bg-rose px-7 py-3 text-white font-semibold hover:bg-rose/85 transition"
         >
-          Join a Live Session
+          Start the 90-Day Reset
         </a>
         <a
-          href="/shop"
+          href="/live"
           class="inline-flex items-center justify-center rounded-xl border border-ink/30 px-7 py-3 text-ink hover:bg-ink/5 transition"
         >
-          Explore the Feel Great System
+          Join a Live Session
         </a>
       </div>
     </div>

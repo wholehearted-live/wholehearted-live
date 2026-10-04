@@ -1,0 +1,314 @@
+---
+import ProtocolLayout from "../layouts/ProtocolLayout.astro";
+import ProtocolCTA from "../components/ProtocolCTA.astro";
+import AsSeenIn from "../components/AsSeenIn.astro";
+import TrustBar from "../components/TrustBar.astro";
+import LineIcon from "../components/LineIcon.astro";
+import { LINKS } from "../data/links";
+
+// Paste a video embed URL (YouTube/Vimeo "embed" link) to show Molly's intro video in the hero.
+const heroVideo = "";
+
+// Real testimonials only — the section stays hidden until at least one is added.
+// Add { quote, name, detail } entries with the person's written permission.
+const testimonials: { quote: string; name: string; detail?: string }[] = [];
+
+const benefits = [
+  { icon: "wave", title: "Steadier Blood Sugar", body: "Balance's fiber matrix slows carb absorption so glucose and insulin rise more gently after meals." },
+  { icon: "apple", title: "Quieter Cravings", body: "Steady blood sugar means fewer \"I need something sweet\" moments and easier portion control." },
+  { icon: "tape", title: "Waistline Support", body: "Many people notice less bloating and a trimmer midsection as their metabolism settles." },
+  { icon: "sun", title: "Clean, Lasting Energy", body: "Unimate's yerba mate supports focus and mood — no jitters, no afternoon crash." },
+  { icon: "clipboard", title: "Healthier Markers", body: "Track your labs with your provider — many see triglycerides, A1C, and waist size move in the right direction." },
+  { icon: "check", title: "Ridiculously Simple", body: "Unimate in the morning. Balance before your biggest meal. That's it." },
+];
+
+const included = [
+  ["Unimate", "clean, steady lift + fewer cravings"],
+  ["Balance", "gentler post-meal glucose + happy digestion"],
+  ["Quick-Start Guide", "exact timing + mixing tips"],
+  ["WholeHearted Community", "encouragement, prayer, and accountability"],
+  ["Live Q&A Sessions", "Thursday evenings with Molly"],
+  ["Personal Check-Ins", "so you're never stuck or guessing"],
+  ["Ships to Your Door", "backed by a 90-day money-back guarantee"],
+];
+
+const phases = [
+  {
+    weeks: "Week 1–2",
+    quote: "I feel different already.",
+    intro: "Start your day with Unimate. Take Balance before your largest meal.",
+    points: ["Mental clarity kicks in; mood feels lighter", "Hunger calms; snacking becomes optional", "Bloating eases", "The afternoon crash starts to fade", "Longer gaps between meals feel easy"],
+  },
+  {
+    weeks: "Week 3–4",
+    quote: "Okay… this is working.",
+    intro: "Consistency compounds and visible change shows up.",
+    points: ["Weight begins trending down — no white-knuckle dieting", "Sugar gets easier to say no to", "Steadier energy after meals", "Deeper sleep and better mornings"],
+  },
+  {
+    weeks: "Week 5–8",
+    quote: "I'm in control again.",
+    intro: "New habits settle in as your body responds.",
+    points: ["Clothes start fitting better", "Less puffiness; clearer skin", "Motivation returns — you want to move", "Evening munchies fade"],
+  },
+  {
+    weeks: "Week 9–12",
+    quote: "This is my new normal.",
+    intro: "You're not \"on a program\" anymore — this is simply how you live.",
+    points: ["Calm, consistent energy all day", "Mood steady; mind clear", "Weight trending the right way, sustainably", "A great time to recheck labs with your provider"],
+  },
+];
+---
+
+<ProtocolLayout title="The Metabolic Reset Protocol — WholeHearted">
+
+  <!-- ============ HERO ============ -->
+  <section class="bg-clay text-white">
+    <div class="mx-auto max-w-3xl px-4 pt-14 pb-16 text-center">
+      <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-white/80">WholeHearted · 90-Day Reset</p>
+      <h1 class="brand-font mt-4 text-4xl sm:text-6xl font-bold leading-tight">The Metabolic Reset Protocol</h1>
+      <p class="mt-6 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
+        Burn body fat, calm belly bloat, and make healthy eating feel effortless — with faith, coaching, and community walking beside you.
+      </p>
+      <p class="mt-3 text-white/80">Simple. Science-backed. 90-day money-back guarantee.</p>
+
+      <ProtocolCTA variant="light" />
+
+      <div class="mt-12 rounded-2xl border-4 border-white/80 bg-white/10 p-2 shadow-2xl">
+        {heroVideo ? (
+          <div class="aspect-video overflow-hidden rounded-xl">
+            <iframe src={heroVideo} title="Welcome from Molly" class="h-full w-full" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        ) : (
+          <div class="aspect-video rounded-xl bg-blush flex flex-col items-center justify-center text-center p-6">
+            <img src="/logo-wholehearted-living.png" alt="" class="h-40 sm:h-64 object-contain mb-4" />
+            <p class="brand-font italic text-clay text-lg">"I never wanted health to be something I only thought about when something went wrong."</p>
+            <p class="text-ink/50 text-sm mt-1">— Molly Broad · @metabolicmolly</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AS SEEN IN ============ -->
+  <AsSeenIn />
+
+  <TrustBar />
+
+  <!-- ============ WHY IT WORKS ============ -->
+  <section class="bg-blush">
+    <div class="mx-auto max-w-5xl px-4 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="brand-font text-3xl sm:text-4xl font-bold text-ink">Why the 2-Step Metabolic Reset Works</h2>
+        <p class="mt-4 text-ink/70 text-lg">A simple morning + mealtime routine that smooths blood sugar, calms cravings, and helps your body burn fat smarter — without strict dieting.</p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {benefits.map((b) => (
+          <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-ink/5">
+            <div class="h-14 w-14 rounded-full bg-blush flex items-center justify-center text-clay"><LineIcon name={b.icon} class="h-7 w-7" /></div>
+            <h3 class="mt-4 text-lg font-bold text-clay">{b.title}</h3>
+            <p class="mt-2 text-ink/70 leading-relaxed">{b.body}</p>
+          </div>
+        ))}
+      </div>
+      <ProtocolCTA />
+    </div>
+  </section>
+
+  <!-- ============ HI, I'M MOLLY ============ -->
+  <section class="bg-clay text-white">
+    <div class="mx-auto max-w-5xl px-4 py-20 grid gap-12 md:grid-cols-5 items-center">
+      <div class="md:col-span-2">
+        <!-- Replace with: <img src="/team/molly.jpg" alt="Molly Broad" class="w-full rounded-2xl object-cover aspect-[4/5]" /> -->
+        <div class="aspect-[4/5] rounded-2xl bg-white/15 border-4 border-white/70 flex flex-col items-center justify-center">
+          <div class="h-24 w-24 rounded-full bg-white/25 flex items-center justify-center brand-font text-4xl">M</div>
+          <p class="mt-3 text-white/70 text-sm">Molly's photo</p>
+        </div>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="brand-font text-3xl sm:text-4xl font-bold">Hi, I'm Molly!</h2>
+        <p class="mt-1 text-white/80 font-medium tracking-wide">@metabolicmolly</p>
+        <div class="mt-6 space-y-5 text-white/90 leading-relaxed text-[1.05rem]">
+          <p>
+            Health has been part of my story for as long as I can remember — and it's deeply personal. Near the end of her life,
+            my mom, Mary, was taking <strong>42 different medications</strong> to manage Parkinson’s disease, Lewy body dementia,
+            hypertension, and other chronic conditions. Watching someone you love go through that changes you.
+          </p>
+          <p>
+            Even with my lifelong focus on nutrition and fitness, I eventually found myself struggling too — my weight went up and down,
+            my energy faded, and I dealt with cravings, brain fog, poor sleep, and bloating.
+          </p>
+          <p>
+            A close friend introduced me to the <strong>Feel Great System</strong>, and I began learning about insulin resistance, blood sugar, and how
+            interconnected our metabolism really is. Over the following months, <strong>I lost 11 pounds</strong>, my bloating improved,
+            my energy came back, I started sleeping through the night, and my cravings finally quieted down.
+          </p>
+          <p>
+            For the first time, I felt like I was beginning to understand my body instead of constantly fighting it. I'm not here to
+            replace your doctor — I'm here to help you understand your body and find <strong>simple, sustainable ways</strong> to support your metabolic health.
+          </p>
+          <p class="text-sm text-white/70">
+            My results are my own; yours may differ. I'm an independent Unicity distributor and may earn a commission on purchases.
+            <a href="/about" class="underline hover:text-white">Read my full story →</a>
+          </p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {["Certified Health Coach", "Functional Nutrition", "Pastoral Counselor", "Founder, WholeHearted"].map((t) => (
+            <span class="rounded-full bg-white/15 px-3 py-1 text-xs font-medium">{t}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE 2 STEPS ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-5xl px-4 py-20">
+      <div class="text-center">
+        <h2 class="brand-font text-3xl sm:text-4xl font-bold text-ink">The 2-Step Metabolic Reset</h2>
+        <p class="mt-2 text-clay font-semibold uppercase tracking-widest text-sm">The Feel Great System</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl bg-blush p-8">
+          <p class="text-clay font-bold uppercase tracking-widest text-xs">Step 1 · Morning &amp; Mid-Day</p>
+          <h3 class="brand-font mt-2 text-2xl font-bold">Unimate</h3>
+          <p class="mt-3 text-ink/75 leading-relaxed">A concentrated yerba mate drink for clean energy, a brighter mood, fewer cravings, and laser focus — so you can cruise through the day without snacking.</p>
+        </div>
+        <div class="rounded-3xl bg-blush p-8">
+          <p class="text-clay font-bold uppercase tracking-widest text-xs">Step 2 · Before Your Largest Meal</p>
+          <h3 class="brand-font mt-2 text-2xl font-bold">Balance</h3>
+          <p class="mt-3 text-ink/75 leading-relaxed">A unique fiber matrix that slows carb absorption, helps level glucose and insulin, supports gut health, and keeps you satisfied longer.</p>
+        </div>
+      </div>
+      <p class="mt-10 text-center text-ink/75 max-w-3xl mx-auto text-lg leading-relaxed">
+        People report better energy, clearer skin, smaller waistlines, and the confidence that comes from feeling in control again.
+        Plus, you're not doing this alone — you get Molly's personal coaching and a faith-filled community.
+      </p>
+      <div class="mt-8 mx-auto max-w-2xl rounded-2xl border-2 border-dashed border-clay/40 p-6 text-center">
+        <p class="font-bold text-clay inline-flex items-center gap-2"><LineIcon name="shield" class="h-5 w-5" /> 90-Day Money-Back Guarantee</p>
+        <p class="mt-1 text-ink/70">Give it a full 90 days. If you're not happy with how you feel, Unicity refunds your purchase. Zero risk.</p>
+      </div>
+      <ProtocolCTA />
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS (hidden until real ones are added) ============ -->
+  {testimonials.length > 0 && (
+    <section class="bg-blush">
+      <div class="mx-auto max-w-5xl px-4 py-20">
+        <h2 class="brand-font text-3xl sm:text-4xl font-bold text-center">Here's What People Are Saying</h2>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          {testimonials.map((t) => (
+            <figure class="rounded-2xl bg-white p-7 shadow-sm">
+              <p class="text-clay text-xl" aria-hidden="true">★★★★★</p>
+              <blockquote class="mt-3 text-ink/80 leading-relaxed">"{t.quote}"</blockquote>
+              <figcaption class="mt-4 text-sm font-semibold">— {t.name}{t.detail && <span class="font-normal text-ink/50"> · {t.detail}</span>}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <p class="mt-6 text-center text-xs text-ink/50">Individual results vary.</p>
+        <ProtocolCTA />
+      </div>
+    </section>
+  )}
+
+  <!-- ============ WHAT YOU GET ============ -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-3xl px-4 py-20">
+      <h2 class="brand-font text-3xl sm:text-4xl font-bold text-center">Here's What You Get</h2>
+      <p class="mt-3 text-center text-white/70">Everything you need to start — and stay consistent.</p>
+      <ul class="mt-10 space-y-4">
+        {included.map(([name, desc]) => (
+          <li class="flex items-start gap-4 rounded-xl bg-white/5 p-4 ring-1 ring-white/10">
+            <span class="mt-0.5 h-7 w-7 shrink-0 rounded-full bg-clay flex items-center justify-center text-sm font-bold" aria-hidden="true">✓</span>
+            <p><strong class="text-white">{name}:</strong> <span class="text-white/75">{desc}</span></p>
+          </li>
+        ))}
+      </ul>
+      <ProtocolCTA variant="light" />
+    </div>
+  </section>
+
+  <!-- ============ 90-DAY PLAN ============ -->
+  <section class="bg-blush">
+    <div class="mx-auto max-w-5xl px-4 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-clay font-bold uppercase tracking-[0.25em] text-xs">The Plan</p>
+        <h2 class="brand-font mt-2 text-3xl sm:text-4xl font-bold">Your 90-Day Metabolic Reset</h2>
+        <p class="mt-4 text-ink/70 text-lg">Your easiest path to more energy, better focus, and healthier weight — without fad diets or complicated plans.</p>
+      </div>
+      <ol class="mt-12 relative border-l-2 border-clay/30 ml-3 sm:ml-6 space-y-10">
+        {phases.map((p, i) => (
+          <li class="pl-8 sm:pl-10 relative">
+            <span class="absolute -left-[17px] top-0 h-8 w-8 rounded-full bg-clay text-white flex items-center justify-center text-sm font-bold">{i + 1}</span>
+            <div class="rounded-2xl bg-white p-7 shadow-sm">
+              <p class="text-clay font-bold uppercase tracking-widest text-xs">{p.weeks}</p>
+              <h3 class="brand-font mt-1 text-2xl italic">"{p.quote}"</h3>
+              <p class="mt-2 text-ink/70">{p.intro}</p>
+              <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+                {p.points.map((pt) => (
+                  <li class="flex gap-2 text-ink/80"><span class="text-clay" aria-hidden="true">♥</span>{pt}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-10 text-center brand-font text-xl italic text-ink/80">You feel great — because your body is finally working with you, not against you.</p>
+      <p class="mt-2 text-center text-xs text-ink/50">Typical experiences shared by users; individual results vary.</p>
+      <ProtocolCTA />
+    </div>
+  </section>
+
+  <!-- ============ SCIENCE MADE SIMPLE ============ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-3xl px-4 py-20">
+      <h2 class="brand-font text-3xl sm:text-4xl font-bold text-center">GLP-1, Insulin &amp; Your Metabolism — Made Simple</h2>
+      <div class="mt-10 space-y-6 text-ink/80 text-lg leading-relaxed">
+        <p>Your body naturally makes a fullness hormone called <strong>GLP-1</strong>. When it's supported, cravings quiet down and energy steadies. <strong>Unimate</strong> (yerba mate extract) supports focus and energy so you feel satisfied longer — without the crash.</p>
+        <p>Before meals, <strong>Balance</strong> (a multi-source fiber blend) forms a gentle gel that slows how quickly carbohydrates are absorbed, softens glucose and insulin spikes, and feeds your gut microbiome.</p>
+        <p class="rounded-2xl bg-blush p-6 font-medium text-ink">The result? Fewer spikes, fewer cravings, easier time between meals, and natural fat loss — without rigid meal plans.</p>
+        <p class="text-base text-ink/60 border-l-4 border-clay/40 pl-4"><strong class="text-ink/80">A quick note:</strong> if you take insulin or other glucose-lowering or blood-pressure medication, talk with your provider before starting — as your numbers improve, your doses may need adjusting.</p>
+      </div>
+      <ProtocolCTA />
+    </div>
+  </section>
+
+  <!-- ============ SCRIPTURE ============ -->
+  <section class="bg-blush">
+    <div class="mx-auto max-w-3xl px-4 py-16 text-center">
+      <blockquote class="brand-font text-2xl sm:text-3xl italic text-ink leading-snug">
+        "Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth."
+      </blockquote>
+      <p class="mt-4 text-clay font-semibold tracking-widest text-sm uppercase">3 John 1:2</p>
+    </div>
+  </section>
+
+  <!-- ============ GUARANTEE + FINAL CTA ============ -->
+  <section class="bg-clay text-white">
+    <div class="mx-auto max-w-3xl px-4 py-20 text-center">
+      <div class="mx-auto h-36 w-36 rounded-full border-4 border-white/80 flex flex-col items-center justify-center shadow-xl">
+        <span class="text-4xl font-bold leading-none">90</span>
+        <span class="text-xs font-semibold uppercase tracking-widest mt-1">Day</span>
+        <span class="text-[0.65rem] uppercase tracking-widest text-white/80">Guarantee</span>
+      </div>
+      <h2 class="brand-font mt-8 text-3xl sm:text-4xl font-bold">Zero-Risk Commitment</h2>
+      <p class="mt-4 text-white/90 text-lg">Try the full 90-day reset. If it isn't right for you, get your money back. You have nothing to lose — and your health to gain.</p>
+      <ProtocolCTA variant="light" note="Secure checkout on Unicity's Feel Great site · Ships to your door" />
+      <p class="mt-8 text-white/80 text-sm">Questions first? <a href="/live" class="underline hover:text-white">Join our Thursday live Q&amp;A</a> or email <a href={`mailto:${LINKS.contact.email}`} class="underline hover:text-white">{LINKS.contact.email}</a>.</p>
+    </div>
+  </section>
+
+  <!-- Sticky mobile CTA -->
+  <div id="sticky-cta" class="fixed inset-x-0 bottom-0 z-40 translate-y-full transition-transform duration-300 md:hidden bg-white/95 backdrop-blur border-t border-ink/10 p-3">
+    <a href={LINKS.unicity.tryIt} target="_blank" rel="noopener noreferrer" class="block rounded-full bg-clay py-3.5 text-center font-semibold uppercase tracking-wide text-white">Yes! I Want the Protocol</a>
+  </div>
+  <script>
+    const bar = document.getElementById("sticky-cta");
+    if (bar) {
+      const onScroll = () => bar.classList.toggle("translate-y-full", window.scrollY < 700);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+  </script>
+</ProtocolLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TrustBar from "../components/TrustBar.astro";
 import { LINKS } from "../data/links";
 ---
 
@@ -37,8 +38,9 @@ import { LINKS } from "../data/links";
         Join Our Team
       </a>
     </div>
-    <p class="mt-4 text-xs text-ink/50">Backed by science · 90-Day money-back guarantee · Ships to your door</p>
   </section>
+
+  <TrustBar />
 
   <!-- DIVIDER -->
   <div class="border-t border-ink/10 mb-16"></div>
