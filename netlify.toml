@@ -4,3 +4,17 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# metabolicmolly.com (and www) is a domain alias on this Netlify site.
+# Send every visit to the same path on wholehearted.live.
+[[redirects]]
+  from   = "https://metabolicmolly.com/*"
+  to     = "https://wholehearted.live/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "https://www.metabolicmolly.com/*"
+  to     = "https://wholehearted.live/:splat"
+  status = 301
+  force  = true

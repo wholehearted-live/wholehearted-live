@@ -9,9 +9,21 @@ import { LINKS } from "../data/links";
 // Paste a video embed URL (YouTube/Vimeo "embed" link) to show Molly's intro video in the hero.
 const heroVideo = "";
 
-// Real testimonials only — the section stays hidden until at least one is added.
-// Add { quote, name, detail } entries with the person's written permission.
-const testimonials: { quote: string; name: string; detail?: string }[] = [];
+// Real results only, with each person's permission. Photos live in public/results/.
+// Keep summaries to weight, inches, energy, sleep, cravings — no disease, cure, or
+// medication claims (FTC/FDA + Unicity policy). Mark distributors so the connection is disclosed.
+const results: { name: string; photo: string; summary: string; distributor?: boolean }[] = [
+  { name: "Michael Smith", photo: "michael-smith.jpg", summary: "80 lbs down and waist from 46\" to 32\". More energy, sleeping through the night, and no more brain fog." },
+  { name: "Jimmy", photo: "jimmy.jpg", summary: "Down 88 lbs. \"I have my life back.\"" },
+  { name: "Jennifer Baydo", photo: "jennifer-baydo.jpg", summary: "161 → 144 lbs in 45 days. Energy is high and the menopausal belly fat is gone." },
+  { name: "Laurie", photo: "laurie.jpg", summary: "Down 25 lbs in 3 months. Energy and mood are back, and she's sleeping again." },
+  { name: "Dr. Kenny Harless", photo: "dr-kenny.jpg", summary: "Down 50 lbs and rebuilding muscle.", distributor: true },
+  { name: "Andrya Martin", photo: "andrya-martin.jpg", summary: "Down 30 lbs and 15 inches. Sleeping better and focusing better.", distributor: true },
+  { name: "Kimberly", photo: "kimberly.jpg", summary: "Down 16 lbs and able to build muscle again after years of trying." },
+  { name: "George", photo: "george.jpg", summary: "A 28-inch waist and gaining lean muscle. Cravings for sweets and soda are gone." },
+  { name: "Sheradon", photo: "sheradon.jpg", summary: "More energy and feeling like herself again." },
+  { name: "Community member", photo: "community-member.jpg", summary: "31 lbs down in about two months. More energy and no more \"food noise.\"" },
+];
 
 const benefits = [
   { icon: "wave", title: "Steadier Blood Sugar", body: "Balance's fiber matrix slows carb absorption so glucose and insulin rise more gently after meals." },
@@ -61,6 +73,12 @@ const phases = [
 ---
 
 <ProtocolLayout title="The Metabolic Reset Protocol — WholeHearted">
+
+  <!-- ============ BANNER ============ -->
+  <section class="bg-blush">
+    <img src="/protocol-banner.jpg" alt="Metabolic Health — WholeHearted · Metabolic Molly" width="1417" height="707"
+      class="mx-auto w-full max-w-7xl h-[50vw] max-h-[560px] object-cover" />
+  </section>
 
   <!-- ============ HERO ============ -->
   <section class="bg-clay text-white">
@@ -192,21 +210,31 @@ const phases = [
     </div>
   </section>
 
-  <!-- ============ TESTIMONIALS (hidden until real ones are added) ============ -->
-  {testimonials.length > 0 && (
+  <!-- ============ REAL PEOPLE, REAL RESULTS ============ -->
+  {results.length > 0 && (
     <section class="bg-blush">
-      <div class="mx-auto max-w-5xl px-4 py-20">
-        <h2 class="brand-font text-3xl sm:text-4xl font-bold text-center">Here's What People Are Saying</h2>
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure class="rounded-2xl bg-white p-7 shadow-sm">
-              <p class="text-clay text-xl" aria-hidden="true">★★★★★</p>
-              <blockquote class="mt-3 text-ink/80 leading-relaxed">"{t.quote}"</blockquote>
-              <figcaption class="mt-4 text-sm font-semibold">— {t.name}{t.detail && <span class="font-normal text-ink/50"> · {t.detail}</span>}</figcaption>
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-clay font-bold uppercase tracking-[0.25em] text-xs">Before &amp; After</p>
+          <h2 class="brand-font mt-2 text-3xl sm:text-4xl font-bold">Real People, Real Results</h2>
+          <p class="mt-4 text-ink/70 text-lg">Everyday people who gave the Feel Great System a real try.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {results.map((r) => (
+            <figure class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-ink/5 flex flex-col">
+              <img src={`/results/${r.photo}`} alt={`${r.name} before and after`} loading="lazy" class="w-full aspect-[4/3] object-contain bg-white" />
+              <figcaption class="p-6 flex-1">
+                <p class="brand-font text-xl font-bold text-clay">{r.name}</p>
+                <p class="mt-2 text-ink/80 leading-relaxed">{r.summary}</p>
+                {r.distributor && <p class="mt-3 text-xs text-ink/50">Independent Unicity distributor</p>}
+              </figcaption>
             </figure>
           ))}
         </div>
-        <p class="mt-6 text-center text-xs text-ink/50">Individual results vary.</p>
+        <p class="mt-8 text-center text-xs text-ink/55 max-w-2xl mx-auto leading-relaxed">
+          These are individual experiences shared with permission, not typical results — your results will vary with diet, activity, and health history.
+          Some people shown are independent Unicity distributors. These products are not intended to diagnose, treat, cure, or prevent any disease.
+        </p>
         <ProtocolCTA />
       </div>
     </section>
