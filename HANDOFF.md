@@ -55,3 +55,18 @@ Also fix wholehearted.live: MX is split between Google and Mailgun (inbound mail
 
 ## Run locally
 npm install && npm run dev   →  http://localhost:4321/protocol
+
+## GoHighLevel — Metabolic Coach AI (updated Oct 4, 2026)
+Existing setup (built with A.I.M.): FB/IG comment → public reply → DM → "Metabolic Coach" Conversation AI (auto-pilot);
+"PPP No Purchase Follow Up" sends 3 DMs over ~21h after the "sent link" tag. No email follow-up exists yet.
+Changes made Oct 4 (saved + tested in the agent's practice chat):
+- Prompt replaced with `ghl/metabolic-coach-prompt.txt` (backup of the old one: `ghl/metabolic-coach-prompt-ORIGINAL-2026-10-04.txt`).
+  Honest if sincerely asked "real person or bot?"; answers price immediately ($159/mo subscription, $169 one-time);
+  SMS consent wording; stricter health rules; no income talk; only Molly's order link https://ufeelgreat.com/c/wholehearted.
+- Knowledge Base Trigger added: "Metabolic Molly" KB (was not connected before; bot had invented $179).
+- Contact Info actions added: Primary Metabolic Concern, How long struggling. (Name/email/phone are saved natively.)
+Still to do:
+- [ ] Upload `ghl/approved-answers.txt` to the Metabolic Molly KB. Confirm Balance timing (10–15 min before largest meal).
+- [ ] Remove "Great Prompts to build your Unicity business.pdf" from the KB; drop one GLP-1 duplicate; review doctor-leave-behind.
+- [ ] Build an email nurture series for "sent link" + not purchased (emails are collected but never used).
+- [ ] A2P 10DLC registration before any marketing texts. Fill in agent "Business Name".
