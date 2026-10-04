@@ -72,7 +72,10 @@ const phases = [
 ];
 ---
 
-<ProtocolLayout title="The Metabolic Reset Protocol — WholeHearted">
+<ProtocolLayout
+  title="90-Day Metabolic Reset with Metabolic Molly | WholeHearted"
+  description="A simple 2-step routine with Unimate and Balance to support healthy blood sugar, quiet cravings, and steady energy — with personal coaching from Molly Broad."
+>
 
   <!-- ============ HERO ============ -->
   <section class="bg-clay text-white">
@@ -131,7 +134,7 @@ const phases = [
   <section class="bg-clay text-white">
     <div class="mx-auto max-w-5xl px-4 py-20 grid gap-12 md:grid-cols-5 items-center">
       <div class="md:col-span-2">
-        <img src="/team/molly.jpg" alt="Molly Broad holding Unimate and Balance" class="w-full rounded-2xl border-4 border-white/70 object-cover aspect-[4/5]" />
+        <img src="/team/molly.jpg" alt="Molly Broad holding Unimate and Balance" width="843" height="938" class="w-full rounded-2xl border-4 border-white/70 object-cover aspect-[4/5]" />
       </div>
       <div class="md:col-span-3">
         <h2 class="brand-font text-3xl sm:text-4xl font-bold">Hi, I'm Molly!</h2>
@@ -212,7 +215,7 @@ const phases = [
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {results.map((r) => (
             <figure class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-ink/5 flex flex-col">
-              <img src={`/results/${r.photo}`} alt={`${r.name} before and after`} loading="lazy" class="w-full aspect-[4/3] object-contain bg-white" />
+              <img src={`/results/${r.photo}`} alt={`${r.name} before and after`} width="640" height="480" loading="lazy" class="w-full aspect-[4/3] object-contain bg-white" />
               <figcaption class="p-6 flex-1">
                 <p class="brand-font text-xl font-bold text-clay">{r.name}</p>
                 <p class="mt-2 text-ink/80 leading-relaxed">{r.summary}</p>

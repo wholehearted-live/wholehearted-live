@@ -7,12 +7,38 @@ const {
   title = "WholeHearted — Faith, Wellness & Community",
   description = "WholeHearted helps families reclaim their health — body, mind, and spirit — through faith-centered wellness education and the Feel Great System.",
   index = false,
-  image = "/logo-wholehearted-living.png",
+  image = "/og-default.jpg",
   canonical = Astro.url.href,
 } = Astro.props;
 
 const siteName = "WholeHearted";
 const siteUrl = "https://wholehearted.live";
+
+// Tells search engines who runs the site. Add social profile URLs to sameAs once they're real.
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/logo-wholehearted-living.png`,
+  email: "hello@wholehearted.live",
+  telephone: "+1-513-650-6639",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1671 Big Bear Dr.",
+    addressLocality: "Centerville",
+    addressRegion: "OH",
+    postalCode: "45458",
+    addressCountry: "US",
+  },
+  founder: {
+    "@type": "Person",
+    name: "Molly Broad",
+    alternateName: "Metabolic Molly",
+    image: `${siteUrl}/team/molly.jpg`,
+    url: `${siteUrl}/about/`,
+  },
+};
 ---
 
 <!doctype html>
@@ -35,8 +61,8 @@ const siteUrl = "https://wholehearted.live";
   <meta property="og:description" content={description} />
   <meta property="og:url"         content={canonical} />
   <meta property="og:image"       content={`${siteUrl}${image}`} />
-  <meta property="og:image:width"  content="1280" />
-  <meta property="og:image:height" content="640" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale"      content="en_US" />
 
   <!-- Twitter / X Card -->
@@ -60,6 +86,8 @@ const siteUrl = "https://wholehearted.live";
   />
 
   <title>{title}</title>
+
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
 
   <!-- GoHighLevel tracking -->
   <script
