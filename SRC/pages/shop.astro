@@ -2,11 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TrustBar from "../components/TrustBar.astro";
 import { LINKS } from "../data/links";
+import { RESULTS, RESULTS_DISCLAIMER } from "../data/results";
 ---
 
 <BaseLayout
   title="Feel Great System | WholeHearted"
   description="Discover the Feel Great System — Unimate & Balance — the simple 2-step protocol that helps you reclaim your energy, curb cravings, and feel whole again."
+  index={true}
 >
 
   <!-- HERO -->
@@ -225,56 +227,26 @@ import { LINKS } from "../data/links";
 
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="mb-20 max-w-4xl mx-auto">
+  <!-- TESTIMONIALS — real results, shared with /protocol (SRC/data/results.ts) -->
+  <section class="mb-20 max-w-5xl mx-auto">
     <div class="text-center mb-10">
       <p class="text-rose font-semibold tracking-widest text-sm uppercase mb-3">Real People. Real Results.</p>
       <h2 class="text-3xl font-semibold text-ink tracking-tight">What the Community Is Saying</h2>
       <p class="mt-3 text-ink/60 max-w-xl mx-auto">These are everyday people — not athletes or influencers — just folks who decided to feel better.</p>
     </div>
-    <div class="grid sm:grid-cols-3 gap-6">
-      {[
-        {
-          quote: "I had zero energy for years. Within two weeks on the Feel Great System I was waking up before my alarm — something that hadn't happened in a decade.",
-          name: "Lisa M.",
-          detail: "Lost 18 lbs · More energy than her 30s",
-        },
-        {
-          quote: "My A1C dropped from 8.1 to 6.4 in four months. My doctor was shocked. I wasn't — I finally gave my body what it needed.",
-          name: "David R.",
-          detail: "Reversed pre-diabetes markers",
-        },
-        {
-          quote: "The community at WholeHearted kept me going when I wanted to quit. This isn't just a product — it's people who genuinely care.",
-          name: "Michelle T.",
-          detail: "Down 24 lbs · Off blood pressure meds",
-        },
-        {
-          quote: "I've tried everything. This is the first thing that actually worked — and I didn't have to give up my life to do it.",
-          name: "James K.",
-          detail: "Lost 31 lbs in 90 days",
-        },
-        {
-          quote: "As a woman of faith, finding a wellness community that actually honors that dimension of health was everything. WholeHearted is the real deal.",
-          name: "Sharon W.",
-          detail: "90-day member · Feel Great ambassador",
-        },
-        {
-          quote: "Brain fog I'd had for years just lifted. My husband noticed before I did. I feel like myself again — actually, better than myself.",
-          name: "Karen B.",
-          detail: "Mental clarity · 15 lbs lighter",
-        },
-      ].map(({ quote, name, detail }) => (
-        <div class="rounded-2xl border border-ink/10 bg-white/70 p-6 flex flex-col">
-          <p class="text-rose text-2xl mb-3 leading-none">"</p>
-          <p class="text-sm text-ink/75 leading-relaxed flex-1 italic">{quote}</p>
-          <div class="mt-5 pt-4 border-t border-ink/10">
-            <p class="font-semibold text-ink text-sm">{name}</p>
-            <p class="text-xs text-ink/50 mt-0.5">{detail}</p>
-          </div>
-        </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {RESULTS.map((r) => (
+        <figure class="rounded-2xl border border-ink/10 bg-white/70 overflow-hidden flex flex-col">
+          <img src={`/results/${r.photo}`} alt={`${r.name} before and after`} width="640" height="480" loading="lazy" class="w-full aspect-[4/3] object-contain bg-white" />
+          <figcaption class="p-5 flex-1">
+            <p class="font-semibold text-ink">{r.name}</p>
+            <p class="mt-1 text-sm text-ink/70 leading-relaxed">{r.summary}</p>
+            {r.distributor && <p class="mt-2 text-xs text-ink/45">Independent Unicity distributor</p>}
+          </figcaption>
+        </figure>
       ))}
     </div>
+    <p class="mt-6 text-center text-xs text-ink/50 max-w-2xl mx-auto leading-relaxed">{RESULTS_DISCLAIMER}</p>
   </section>
 
   <!-- BEFORE & AFTER -->
@@ -285,53 +257,7 @@ import { LINKS } from "../data/links";
       <p class="mt-3 text-ink/60 max-w-xl mx-auto">It's not just about the scale. It's about how you feel every single day.</p>
     </div>
 
-    <!-- Photo Stories — add real before/after images to /public/transformations/ -->
-    <!-- Each entry: beforeImg, afterImg, name, result, quote -->
-    <!-- To add a new person: drop their photos in public/transformations/ and add an entry below -->
-    {(() => {
-      const stories = [
-        // {
-        //   beforeImg: "/transformations/lisa-before.jpg",
-        //   afterImg:  "/transformations/lisa-after.jpg",
-        //   name:      "Lisa M.",
-        //   result:    "Lost 18 lbs · More energy than her 30s",
-        //   quote:     "I feel like myself again — actually, better.",
-        // },
-        // {
-        //   beforeImg: "/transformations/david-before.jpg",
-        //   afterImg:  "/transformations/david-after.jpg",
-        //   name:      "David R.",
-        //   result:    "A1C from 8.1 → 6.4 in four months",
-        //   quote:     "My doctor was shocked. I wasn't.",
-        // },
-      ];
 
-      if (stories.length === 0) return null;
-
-      return (
-        <div class="grid sm:grid-cols-2 gap-8 mb-12">
-          {stories.map(({ beforeImg, afterImg, name, result, quote }) => (
-            <div class="rounded-2xl border border-ink/10 bg-white/70 overflow-hidden">
-              <div class="grid grid-cols-2">
-                <div class="relative">
-                  <img src={beforeImg} alt={`${name} before`} class="w-full h-56 object-cover object-top" />
-                  <span class="absolute bottom-2 left-2 bg-ink/60 text-white text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide">Before</span>
-                </div>
-                <div class="relative">
-                  <img src={afterImg} alt={`${name} after`} class="w-full h-56 object-cover object-top" />
-                  <span class="absolute bottom-2 left-2 bg-rose text-white text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide">After</span>
-                </div>
-              </div>
-              <div class="p-5">
-                <p class="font-semibold text-ink">{name}</p>
-                <p class="text-xs text-rose font-medium mt-0.5 mb-2">{result}</p>
-                <p class="text-sm text-ink/65 italic">"{quote}"</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      );
-    })()}
 
     <!-- Text-based Before / After (always visible) -->
     <div class="rounded-2xl border border-ink/10 overflow-hidden">

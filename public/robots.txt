@@ -1,3 +1,4 @@
-# Blocking all crawlers until site is ready to launch
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://wholehearted.live/sitemap.xml

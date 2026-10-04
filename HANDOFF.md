@@ -24,18 +24,22 @@
 - DNS: metabolicmolly.com now points at Netlify (domain aliases added). molly@metabolicmolly.com is Google Workspace (MX smtp.google.com,
   SPF includes Google + LeadConnector + Mailgun, Google DKIM added). GHL sends from `health.metabolicmolly.com` — leave those records.
 
+## Oct 4 launch prep (second machine)
+- SEO: search indexing ON (robots.txt allows all + sitemap; home/about/live/shop/protocol index, /app noindex).
+  Protocol title/description, 1200x630 share images (og-default.jpg, og-protocol.jpg), Organization + founder schema with sameAs.
+- Social links real: facebook.com/MetabolicMolly, instagram.com/metabolicmolly, tiktok.com/@metabolic_molly (footer hides empty links).
+- Results data shared in SRC/data/results.ts — used by /protocol and /shop. Shop's sample testimonials (Lisa M., David R., etc.) removed.
+- Event page + EventLayout deleted; /event 301s to /protocol/. metabolicmolly.com root 301s to /protocol/, other paths to same path.
+- Molly's photo: public/team/molly.jpg (home, about, protocol). Protocol header is now the Metabolic Molly banner.
+
 ## Still to do
 - [ ] Name for "Community member" (last results photo). Typical-results figure for the disclosure if Unicity provides one.
-- [ ] Push netlify.toml redirect (metabolicmolly.com → wholehearted.live; decide home vs /protocol). Netlify HTTPS cert for metabolicmolly.com.
+- [ ] Confirm Netlify HTTPS certificate for metabolicmolly.com is issued.
 - [ ] Google DKIM: click "Start authentication" in Admin → Email setup status. Connect molly@ Gmail to GHL (2-way sync).
-- [ ] Molly's photo → `public/team/molly.jpg`, then swap the "M" placeholders (index, about, protocol — search for `molly.jpg`).
 - [ ] Molly's intro video → set `heroVideo` at top of `protocol.astro` (YouTube/Vimeo embed URL).
-- [ ] Real testimonials → `testimonials` array in `protocol.astro` (section hidden until filled). Review Shop page testimonials are real.
 - [ ] Health coach certification program name.
-- [ ] Consider a more personal headline (e.g., "Molly's 90-Day Metabolic Reset"); header logo strip white or transparent logo.
-- [ ] metabolicmolly.com → 301 redirect to wholehearted.live. Redirect rule is in `netlify.toml`; still needed: add
-      domain alias in Netlify, then at Squarespace DNS change A `@` 162.159.140.166 → 75.2.60.5 and CNAME `www`
-      sites.ludicrous.cloud → wholehearted-live.netlify.app. In GHL remove it only under Sites → Domains (NOT Email Services).
+- [ ] Consider a more personal headline (e.g., "Molly's 90-Day Metabolic Reset").
+- [ ] Submit sitemap in Google Search Console (wholehearted.live/sitemap.xml) after launch.
 - [ ] Optional: drop FDA mark from banner (FDA logo policy); keep GMP seal.
 
 ## Email plan (decided Oct 3): molly@metabolicmolly.com = Google Workspace inbox + GHL tracking

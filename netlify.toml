@@ -6,7 +6,20 @@
   NODE_VERSION = "20"
 
 # metabolicmolly.com (and www) is a domain alias on this Netlify site.
-# Send every visit to the same path on wholehearted.live.
+# Its home page goes to Molly's protocol page; any other path goes to the
+# same path on wholehearted.live. Netlify uses the first rule that matches.
+[[redirects]]
+  from   = "https://metabolicmolly.com/"
+  to     = "https://wholehearted.live/protocol/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "https://www.metabolicmolly.com/"
+  to     = "https://wholehearted.live/protocol/"
+  status = 301
+  force  = true
+
 [[redirects]]
   from   = "https://metabolicmolly.com/*"
   to     = "https://wholehearted.live/:splat"
@@ -18,3 +31,14 @@
   to     = "https://wholehearted.live/:splat"
   status = 301
   force  = true
+
+# The April 29 event page was removed; send old shared links to the protocol page.
+[[redirects]]
+  from   = "/event"
+  to     = "/protocol/"
+  status = 301
+
+[[redirects]]
+  from   = "/event/*"
+  to     = "/protocol/"
+  status = 301

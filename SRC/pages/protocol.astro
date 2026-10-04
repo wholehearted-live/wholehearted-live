@@ -5,32 +5,19 @@ import AsSeenIn from "../components/AsSeenIn.astro";
 import TrustBar from "../components/TrustBar.astro";
 import LineIcon from "../components/LineIcon.astro";
 import { LINKS } from "../data/links";
+import { RESULTS, RESULTS_DISCLAIMER } from "../data/results";
 
 // Paste a video embed URL (YouTube/Vimeo "embed" link) to show Molly's intro video in the hero.
 const heroVideo = "";
 
-// Real results only, with each person's permission. Photos live in public/results/.
-// Keep summaries to weight, inches, energy, sleep, cravings — no disease, cure, or
-// medication claims (FTC/FDA + Unicity policy). Mark distributors so the connection is disclosed.
-const results: { name: string; photo: string; summary: string; distributor?: boolean }[] = [
-  { name: "Michael Smith", photo: "michael-smith.jpg", summary: "80 lbs down and waist from 46\" to 32\". More energy, sleeping through the night, and no more brain fog." },
-  { name: "Jimmy", photo: "jimmy.jpg", summary: "Down 88 lbs. \"I have my life back.\"" },
-  { name: "Jennifer Baydo", photo: "jennifer-baydo.jpg", summary: "161 → 144 lbs in 45 days. Energy is high and the menopausal belly fat is gone." },
-  { name: "Laurie", photo: "laurie.jpg", summary: "Down 25 lbs in 3 months. Energy and mood are back, and she's sleeping again." },
-  { name: "Dr. Kenny Harless", photo: "dr-kenny.jpg", summary: "Down 50 lbs and rebuilding muscle.", distributor: true },
-  { name: "Andrya Martin", photo: "andrya-martin.jpg", summary: "Down 30 lbs and 15 inches. Sleeping better and focusing better.", distributor: true },
-  { name: "Kimberly", photo: "kimberly.jpg", summary: "Down 16 lbs and able to build muscle again after years of trying." },
-  { name: "George", photo: "george.jpg", summary: "A 28-inch waist and gaining lean muscle. Cravings for sweets and soda are gone." },
-  { name: "Sheradon", photo: "sheradon.jpg", summary: "More energy and feeling like herself again." },
-  { name: "Community member", photo: "community-member.jpg", summary: "31 lbs down in about two months. More energy and no more \"food noise.\"" },
-];
+const results = RESULTS;
 
 const benefits = [
   { icon: "wave", title: "Steadier Blood Sugar", body: "Balance's fiber matrix slows carb absorption so glucose and insulin rise more gently after meals." },
   { icon: "apple", title: "Quieter Cravings", body: "Steady blood sugar means fewer \"I need something sweet\" moments and easier portion control." },
   { icon: "tape", title: "Waistline Support", body: "Many people notice less bloating and a trimmer midsection as their metabolism settles." },
   { icon: "sun", title: "Clean, Lasting Energy", body: "Unimate's yerba mate supports focus and mood — no jitters, no afternoon crash." },
-  { icon: "clipboard", title: "Healthier Markers", body: "Track your labs with your provider — many see triglycerides, A1C, and waist size move in the right direction." },
+  { icon: "clipboard", title: "Healthier Markers", body: "Track your progress — waist size, energy, and your regular checkups with your provider — and watch the trend over 90 days." },
   { icon: "check", title: "Ridiculously Simple", body: "Unimate in the morning. Balance before your biggest meal. That's it." },
 ];
 
@@ -75,6 +62,7 @@ const phases = [
 <ProtocolLayout
   title="90-Day Metabolic Reset with Metabolic Molly | WholeHearted"
   description="A simple 2-step routine with Unimate and Balance to support healthy blood sugar, quiet cravings, and steady energy — with personal coaching from Molly Broad."
+  index={true}
 >
 
   <!-- ============ HERO ============ -->
@@ -224,10 +212,7 @@ const phases = [
             </figure>
           ))}
         </div>
-        <p class="mt-8 text-center text-xs text-ink/55 max-w-2xl mx-auto leading-relaxed">
-          These are individual experiences shared with permission, not typical results — your results will vary with diet, activity, and health history.
-          Some people shown are independent Unicity distributors. These products are not intended to diagnose, treat, cure, or prevent any disease.
-        </p>
+        <p class="mt-8 text-center text-xs text-ink/55 max-w-2xl mx-auto leading-relaxed">{RESULTS_DISCLAIMER}</p>
         <ProtocolCTA />
       </div>
     </section>
@@ -289,7 +274,7 @@ const phases = [
         <p>Your body naturally makes a fullness hormone called <strong>GLP-1</strong>. When it's supported, cravings quiet down and energy steadies. <strong>Unimate</strong> (yerba mate extract) supports focus and energy so you feel satisfied longer — without the crash.</p>
         <p>Before meals, <strong>Balance</strong> (a multi-source fiber blend) forms a gentle gel that slows how quickly carbohydrates are absorbed, softens glucose and insulin spikes, and feeds your gut microbiome.</p>
         <p class="rounded-2xl bg-blush p-6 font-medium text-ink">The result? Fewer spikes, fewer cravings, easier time between meals, and natural fat loss — without rigid meal plans.</p>
-        <p class="text-base text-ink/60 border-l-4 border-clay/40 pl-4"><strong class="text-ink/80">A quick note:</strong> if you take insulin or other glucose-lowering or blood-pressure medication, talk with your provider before starting — as your numbers improve, your doses may need adjusting.</p>
+        <p class="text-base text-ink/60 border-l-4 border-clay/40 pl-4"><strong class="text-ink/80">A quick note:</strong> if you take insulin or other glucose-lowering or blood-pressure medication, talk with your provider before starting — changes in how and when you eat can affect your blood sugar, and your provider may want to keep an eye on things.</p>
       </div>
       <ProtocolCTA />
     </div>
