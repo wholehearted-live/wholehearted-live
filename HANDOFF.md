@@ -76,4 +76,8 @@ Workflow "Email Nurture - Sent Link, Not Purchased" (folder 1.0 PPP Automations)
 Trigger: tag added "sent link". Steps: Email 1 → 2d → Email 2 → 2d → Email 3 → 2d → Email 4 → 3d → Email 5 → 3d → Email 6 → 4d → Email 7 → 5d → Email 8 → Goal.
 Goal event: tag added "purchased feel great system" — contact jumps to the goal and stops getting emails.
 From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/email-nurture-series.md`; HTML per email: `ghl/emails/` (regenerate with `node ghl/build-email-html.cjs`).
-- [ ] Send a test email, confirm GHL adds an unsubscribe link, then Publish.
+- [x] Test email sent to c.broad.1@hotmail.com and approved.
+- Settings: Stop on response ON; send window 8 AM–7 PM account timezone, all 7 days. Bot (Conversation AI) is NOT on the Email channel — replies go to Molly (molly@ → Gmail).
+- [ ] Reply test: reply to the test email and see whether it lands in Gmail, GHL Conversations, or both.
+- [ ] Confirm the bot saves emails to contacts (only 1 of 487 "sent link" contacts had an email as of Oct 4).
+- [ ] Publish.
