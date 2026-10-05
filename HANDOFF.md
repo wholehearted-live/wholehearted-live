@@ -83,3 +83,12 @@ From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/emai
 - [x] Published Oct 4. Full test passed on c.broad.1@hotmail.com: enrolled → Email 1 sent → purchased tag → goal → removed.
 - Replies to these emails land ONLY in GHL Conversations (not molly@ Gmail). Molly should use the LeadConnector app and/or a Gmail alert workflow.
 - Backlog: only ~48 engaged contacts have an email (incl. some buyers); ~20k FB/IG contacts have no email and can only be reached via comments/lives or a custom-audience ad (Meta 24h messaging rule).
+
+## Oct 4 evening — follow-up gap found and fixed
+- "A.I. Sent Link" workflow has NO trigger and no runs in 60+ days → nothing has tagged "sent link" since ~early Sept, so
+  "PPP No Purchase Follow Up" (3 DMs) and the email series never fired. Tell A.I.M.; DM follow-up still depends on that tag.
+- Email Nurture now has a 2nd trigger: Contact changed → Email has changed (fires when the bot captures an email).
+  Allow re-entry OFF (prevents double enrollment). Timezone = contact timezone. Stop on response ON.
+- Chris bulk-added the 184 non-buyer contacts with email (5:41 PM PDT Oct 4). Email 1 executed for all; 0 skipped.
+  A few are junk addresses (e.g., squarespace / Google no-reply) — remove from workflow/contacts.
+- Note: buyer exclusion on the new trigger isn't possible in the trigger filter; buyers who get tagged later exit via the Goal.
