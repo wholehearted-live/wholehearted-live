@@ -77,7 +77,9 @@ Trigger: tag added "sent link". Steps: Email 1 → 2d → Email 2 → 2d → Ema
 Goal event: tag added "purchased feel great system" — contact jumps to the goal and stops getting emails.
 From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/email-nurture-series.md`; HTML per email: `ghl/emails/` (regenerate with `node ghl/build-email-html.cjs`).
 - [x] Test email sent to c.broad.1@hotmail.com and approved.
-- Settings: Stop on response ON; send window 8 AM–7 PM account timezone, all 7 days. Bot (Conversation AI) is NOT on the Email channel — replies go to Molly (molly@ → Gmail).
+- Settings: Stop on response ON; send window 8 AM–7 PM in each CONTACT's timezone (audience is worldwide; GHL falls back to account tz = Pacific if unknown), all 7 days. Bot (Conversation AI) is NOT on the Email channel — replies go to Molly (molly@ → Gmail).
 - [ ] Reply test: reply to the test email and see whether it lands in Gmail, GHL Conversations, or both.
 - [ ] Confirm the bot saves emails to contacts (only 1 of 487 "sent link" contacts had an email as of Oct 4).
-- [ ] Publish.
+- [x] Published Oct 4. Full test passed on c.broad.1@hotmail.com: enrolled → Email 1 sent → purchased tag → goal → removed.
+- Replies to these emails land ONLY in GHL Conversations (not molly@ Gmail). Molly should use the LeadConnector app and/or a Gmail alert workflow.
+- Backlog: only ~48 engaged contacts have an email (incl. some buyers); ~20k FB/IG contacts have no email and can only be reached via comments/lives or a custom-audience ad (Meta 24h messaging rule).
