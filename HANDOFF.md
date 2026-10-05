@@ -92,3 +92,9 @@ From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/emai
 - Chris bulk-added the 184 non-buyer contacts with email (5:41 PM PDT Oct 4). Email 1 executed for all; 0 skipped.
   A few are junk addresses (e.g., squarespace / Google no-reply) — remove from workflow/contacts.
 - Note: buyer exclusion on the new trigger isn't possible in the trigger filter; buyers who get tagged later exit via the Goal.
+- Fix for "sent link": Metabolic Coach now has a bot action "Trigger a Workflow: Tag sent link" → runs "A.I. Sent Link"
+  (adds tag "sent link") every time the bot sends https://ufeelgreat.com/c/wholehearted. That re-enables PPP No Purchase
+  Follow Up (DMs) and the email series' original trigger.
+- Stage tags in Email Nurture: after each email an Add Tag step adds "nurture - email 1" … "nurture - email 8".
+  Filter contacts by these tags to see where everyone is. The 184 bulk-added on Oct 4 already passed Email 1, so they
+  start collecting tags at "nurture - email 2".
