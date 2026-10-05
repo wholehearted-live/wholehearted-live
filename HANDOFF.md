@@ -98,3 +98,7 @@ From: Molly Broad <molly@metabolicmolly.com>. Click tracking on. Copy: `ghl/emai
 - Stage tags in Email Nurture: after each email an Add Tag step adds "nurture - email 1" … "nurture - email 8".
   Filter contacts by these tags to see where everyone is. The 184 bulk-added on Oct 4 already passed Email 1, so they
   start collecting tags at "nurture - email 2".
+- Verified 6:10 PM PDT Oct 4: test contact "Test Nurture" (c.broad.1+test@hotmail.com) was created with no email, then had an
+  email added. It entered Email Nurture through the "email added" trigger, got Email 1 and the stage tag, and is now on the 2-day wait.
+  So anyone who gives the bot an email gets the info by email, even if the chat ends there.
+  [ ] Remove the test contact from the workflow (or tag it "purchased feel great system").
