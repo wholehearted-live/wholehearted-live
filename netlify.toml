@@ -20,6 +20,39 @@
   status = 301
   force  = true
 
+# Legal / SMS compliance pages (and the files they load) are served directly on
+# metabolicmolly.com with no redirect, so carriers reviewing texting registration
+# see them on Molly's own domain. Keep these ABOVE the catch-all rules below.
+[[redirects]]
+  from   = "https://metabolicmolly.com/privacy"
+  to     = "/privacy/index.html"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "https://metabolicmolly.com/sms-terms"
+  to     = "/sms-terms/index.html"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "https://metabolicmolly.com/sms-opt-in"
+  to     = "/sms-opt-in/index.html"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "https://metabolicmolly.com/_astro/*"
+  to     = "/_astro/:splat"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "https://metabolicmolly.com/protocol-banner.jpg"
+  to     = "/protocol-banner.jpg"
+  status = 200
+  force  = true
+
 [[redirects]]
   from   = "https://metabolicmolly.com/*"
   to     = "https://wholehearted.live/:splat"

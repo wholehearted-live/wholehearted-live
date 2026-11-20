@@ -1,0 +1,72 @@
+---
+import ProtocolLayout from "../layouts/ProtocolLayout.astro";
+import LegalArticle from "../components/LegalArticle.astro";
+
+// The exact consent wording the chat assistant uses. Keep this in sync with the
+// SMS COLLECTION section of the Metabolic Coach prompt in GoHighLevel.
+const consentAsk =
+  "Want me to text you quick reminders and tips too? If so, reply with your mobile number. By sharing it, you agree to receive recurring texts from Metabolic Molly (up to 8/month). Msg & data rates may apply. Reply STOP to opt out, HELP for help. Terms & privacy: metabolicmolly.com/sms-terms";
+const confirmation =
+  "Metabolic Molly: Thanks for joining! You'll get up to 8 msgs/month with tips, reminders, and event invites. Msg & data rates may apply. Reply HELP for help, STOP to opt out.";
+---
+
+<ProtocolLayout
+  title="How Text Opt-In Works | Metabolic Molly · WholeHearted"
+  description="How people opt in to text messages from Metabolic Molly, with the exact consent wording shown before a number is collected."
+  index={true}
+>
+  <LegalArticle heading="How Text Message Opt-In Works" updated="November 20, 2026">
+    <p>
+      Metabolic Molly (WholeHearted) only texts people who ask for it. Consent is collected one person at a time inside a
+      chat conversation that the person starts on our website chat (metabolicmolly.com/protocol), Facebook Messenger,
+      Instagram, or TikTok. We never buy, rent, or import phone lists.
+    </p>
+
+    <h2>Step by step</h2>
+    <ol class="list-decimal pl-6 mb-4 space-y-2 text-ink/85">
+      <li>The person messages us first, usually to ask about our metabolic health information.</li>
+      <li>After answering their questions, we ask, one time only, whether they'd like texts. The message includes the full disclosure below.</li>
+      <li>The person opts in by replying with their mobile number. If they don't reply with a number, we never ask again and never text them.</li>
+      <li>Our first text confirms the sign-up, repeats the message frequency and rates, and explains STOP and HELP.</li>
+      <li>Replying STOP at any time ends all texts right away.</li>
+    </ol>
+
+    <h2>What the person sees</h2>
+    <div class="not-prose my-6 rounded-2xl border border-ink/10 bg-white p-4 sm:p-6 shadow-sm">
+      <p class="text-xs font-semibold uppercase tracking-wide text-ink/50">Chat on metabolicmolly.com/protocol or social messages</p>
+      <div class="mt-4 space-y-3 text-sm">
+        <div class="flex justify-end">
+          <div class="max-w-[85%] rounded-2xl rounded-br-sm bg-sage px-4 py-2 text-white">Thanks! The video was really helpful.</div>
+        </div>
+        <div class="flex justify-start">
+          <div class="max-w-[85%] rounded-2xl rounded-bl-sm bg-blush px-4 py-2 text-ink">
+            <span class="block text-[11px] font-semibold text-wine">Metabolic Molly</span>
+            {consentAsk}
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="max-w-[85%] rounded-2xl rounded-br-sm bg-sage px-4 py-2 text-white">Yes please! (555) 555-0123</div>
+        </div>
+      </div>
+
+      <p class="mt-6 text-xs font-semibold uppercase tracking-wide text-ink/50">First text message sent after opt-in</p>
+      <div class="mt-3 flex justify-start text-sm">
+        <div class="max-w-[85%] rounded-2xl rounded-bl-sm bg-ink/5 px-4 py-2 text-ink">{confirmation}</div>
+      </div>
+    </div>
+
+    <h2>Opt-in disclosure (exact wording)</h2>
+    <p>"{consentAsk}"</p>
+
+    <h2>Opting out and getting help</h2>
+    <ul>
+      <li>Reply <strong>STOP</strong> (or END, CANCEL, UNSUBSCRIBE, QUIT) to stop all texts.</li>
+      <li>Reply <strong>HELP</strong>, or email <a href="mailto:molly@metabolicmolly.com">molly@metabolicmolly.com</a>, for help.</li>
+      <li>Message frequency varies, up to 8 messages per month. Message and data rates may apply.</li>
+      <li>Consent is not a condition of purchase. Mobile numbers and consent are never shared with third parties for marketing.</li>
+    </ul>
+    <p>
+      Full details: <a href="/sms-terms/">SMS Terms &amp; Conditions</a> and <a href="/privacy/">Privacy Policy</a>.
+    </p>
+  </LegalArticle>
+</ProtocolLayout>
